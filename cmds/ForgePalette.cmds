@@ -15,7 +15,7 @@ AddForgeItem "Nav Barrier" 82 objects\levels\atlas\shared\hub_navigation_machine
 AddForgeItem "Civ Car" 11 objects\gear\atlas\civilian\hu_civ_car_lite\hu_civ_car_lite.crate
 AddForgeItem "Destroyed Civ Car" 11 objects\gear\atlas\civilian\hu_civ_car\hu_civ_car_disabled\hu_civ_car_disabled.crate
 AddForgeItem "Covenant Space Crate" 11 objects\gear\covenant\military\crate_space_a\crate_space_a.crate
-AddForgeItem "Covenant Space Crate 2" 11 objects\gear\covenant\military\crate_space_a\crate_space_b.crate
+AddForgeItem "Covenant Space Crate 2" 11 objects\gear\covenant\military\crate_space_b\crate_space_b.crate
 AddForgeItem "Covenant Baricade" 11 objects\gear\covenant\military\cov_barrier\cov_barrier.crate
 AddForgeItem "Semi Truck" 11 objects\vehicles\civilian\truck_cab_large\truck_cab_large.crate
 AddForgeItem "Semi Truck Bed" 11 objects\vehicles\civilian\truck_cab_large\bed_long\bed_long.crate
@@ -30,8 +30,8 @@ AddForgeItem "Armory Shelf`" 11 objects\levels\solo\020_base\armory_shelf_small\
 AddForgeItem "Crate packing`" 11 objects\gear\human\military\crate_packing_giant\crate_packing_giant.crate
 AddForgeItem "Covenant Antennae`" 11 objects\gear\covenant\military\antennae_comm\antennae_comm.crate
 AddForgeItem "Scrap 1`" 11 objects\levels\atlas\tether_chunks\tether_scrap_d\tether_scrap_d.crate
-AddForgeItem "Scrap 2`" 11 objects\levels\atlas\tether_chunks\tether_scrap_d\tether_scrap_g.crate
-AddForgeItem "Scrap 3`" 11 objects\levels\atlas\tether_chunks\tether_scrap_d\tether_scrap_n.crate
-AddForgeItem "Scrap 4`" 11 objects\levels\atlas\tether_chunks\tether_scrap_d\tether_scrap_p.crate
+AddForgeItem "Scrap 2`" 11 objects\levels\atlas\tether_chunks\tether_scrap_g\tether_scrap_g.crate
+AddForgeItem "Scrap 3`" 11 objects\levels\atlas\tether_chunks\tether_scrap_n\tether_scrap_n.crate
+AddForgeItem "Scrap 4`" 11 objects\levels\atlas\tether_chunks\tether_scrap_p\tether_scrap_p.crate
 AddForgeItem "Medical Kiosk`" 11 objects\levels\atlas\shared\medical_kiosk_wall\medical_kiosk_wall.scenery
 AddForgeItem "Hub Statue`" 11 objects\levels\atlas\h100\statue_hub\statue_hub.scenery
