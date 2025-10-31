@@ -7,6 +7,8 @@ AddForgeItem "Glass Door Split" 82 objects\levels\atlas\h100\glass_door_split\gl
 AddForgeItem "Gate Secruity Small" 82 objects\levels\atlas\gate_security\gate_security_small\gate_security_small.device_machine
 AddForgeItem "Cache Door" 82 objects\levels\atlas\h100\evac_door\evac_door.device_machine
 AddForgeItem "Nav Barrier" 82 objects\levels\atlas\shared\hub_navigation_machines\hub_nav_jersey_barrier\hub_nav_jersey_barrier.device_machine
+AddForgeItem "Hub Door" 82 objects\levels\atlas\h100\hub_door\hub_door.device_machine
+AddForgeItem "Life Large" 82 objects\levels\atlas\l200\lift_large\lift_large.device_machine
 
 
 
@@ -35,3 +37,8 @@ AddForgeItem "Scrap 3`" 11 objects\levels\atlas\tether_chunks\tether_scrap_n\tet
 AddForgeItem "Scrap 4`" 11 objects\levels\atlas\tether_chunks\tether_scrap_p\tether_scrap_p.crate
 AddForgeItem "Medical Kiosk`" 11 objects\levels\atlas\shared\medical_kiosk_wall\medical_kiosk_wall.scenery
 AddForgeItem "Hub Statue`" 11 objects\levels\atlas\h100\statue_hub\statue_hub.scenery
+AddForgeItem "Trash bag 1`" 11 objects\levels\atlas\shared\trash_bag_d\trash_bag_d.scenery
+AddForgeItem "Trash bag 2`" 11 objects\levels\atlas\shared\trash_bag_e\trash_bag_e.scenery
+AddForgeItem "Trash bag 3`" 11 objects\levels\atlas\shared\trash_bag_i\trash_bag_i.scenery
+AddForgeItem "Trash bag 4`" 11 objects\levels\atlas\shared\trash_bag_i01\trash_bag_i01.scenery
+
