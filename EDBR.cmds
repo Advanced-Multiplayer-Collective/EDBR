@@ -5,6 +5,7 @@ D:\eldewrito\eldewrito 0.7\ElDewrito\maps
 SetVariable workingdir ""
 SetVariable modsfolder ""
 SetVariable odstmaps ""
+SetVariable reachmaps ""
 
 // Update at the end of the script
 CreateModPackage 1 Large

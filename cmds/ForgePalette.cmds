@@ -1,7 +1,7 @@
 
 
 
-#MACHINE
+# Machine [82] -------------------------------------------------------------------------------------------------------------
 AddForgeItem "FORCEFIELD BARRIER, COVENANT" 82 objects\gear\atlas\covenant\forcefield_barrier\forcefield_barrier.device_machine
 AddForgeItem "Glass Door Split" 82 objects\levels\atlas\h100\glass_door_split\glass_door_split.device_machine
 AddForgeItem "Gate Secruity Small" 82 objects\levels\atlas\gate_security\gate_security_small\gate_security_small.device_machine
@@ -13,7 +13,7 @@ AddForgeItem "Life Large" 82 objects\levels\atlas\l200\lift_large\lift_large.dev
 
 
 
-#MISC
+# Misc [11] -------------------------------------------------------------------------------------------------------------
 AddForgeItem "Civ Car" 11 objects\gear\atlas\civilian\hu_civ_car_lite\hu_civ_car_lite.crate
 AddForgeItem "Destroyed Civ Car" 11 objects\gear\atlas\civilian\hu_civ_car\hu_civ_car_disabled\hu_civ_car_disabled.crate
 AddForgeItem "Covenant Space Crate" 11 objects\gear\covenant\military\crate_space_a\crate_space_a.crate
@@ -40,5 +40,37 @@ AddForgeItem "Hub Statue`" 11 objects\levels\atlas\h100\statue_hub\statue_hub.sc
 AddForgeItem "Trash bag 1`" 11 objects\levels\atlas\shared\trash_bag_d\trash_bag_d.scenery
 AddForgeItem "Trash bag 2`" 11 objects\levels\atlas\shared\trash_bag_e\trash_bag_e.scenery
 AddForgeItem "Trash bag 3`" 11 objects\levels\atlas\shared\trash_bag_i\trash_bag_i.scenery
-AddForgeItem "Trash bag 4`" 11 objects\levels\atlas\shared\trash_bag_i01\trash_bag_i01.scenery
+AddForgeItem "Trash bag 4'" 11 objects\levels\atlas\shared\trash_bag_i01\trash_bag_i01.scenery
 
+#weapons
+AddForgeItem "Automag" 76 objects\weapons\pistol\automag\automag.weapon
+
+#equipment
+
+AddForgeItem "Health Pack Large" 66 objects\powerups\health_pack\health_pack_large.equipment
+AddForgeItem "Health Pack Medium" 66 objects\powerups\health_pack\health_pack_medium.equipment
+AddForgeItem "Health Pack Small" 66 objects\powerups\health_pack\health_pack_small.equipment
+
+# LIGHTS [92] -------------------------------------------------------------------------------------------------------------
+
+opencachefile reachmaps\forge_halo.map
+porttag objects\levels\forge\ff_light_white\ff_light_white.bloc
+porttag objects\levels\forge\ff_light_red\ff_light_red.bloc
+porttag objects\levels\forge\ff_light_yellow\ff_light_yellow.bloc
+porttag objects\levels\forge\ff_light_orange\ff_light_orange.bloc
+porttag objects\levels\forge\ff_light_green\ff_light_green.bloc
+porttag objects\levels\forge\ff_light_blue\ff_light_blue.bloc
+porttag objects\levels\forge\ff_light_purple\ff_light_purple.bloc
+porttag objects\levels\forge\ff_light_flash_red\ff_light_flash_red.bloc
+porttag objects\levels\forge\ff_light_flash_yellow\ff_light_flash_yellow.bloc
+exit
+
+AddForgeItem "White Light" 7 objects\levels\forge\ff_light_white\ff_light_white.bloc
+AddForgeItem "red Light" 7 objects\levels\forge\ff_light_red\ff_light_red.bloc
+AddForgeItem "yellow Light" 7 objects\levels\forge\ff_light_yellow\ff_light_yellow.bloc
+AddForgeItem "orange Light" 7 objects\levels\forge\ff_light_orange\ff_light_orange.bloc
+AddForgeItem "green Light" 7 objects\levels\forge\ff_light_green\ff_light_green.bloc
+AddForgeItem "blue Light" 7 objects\levels\forge\ff_light_blue\ff_light_blue.bloc
+AddForgeItem "purple Light" 7 objects\levels\forge\ff_light_purple\ff_light_purple.bloc
+AddForgeItem "red Light" 7 objects\levels\forge\ff_light_flash_red\ff_light_flash_red.bloc
+AddForgeItem "yellow Light" 7 objects\levels\forge\ff_light_flash_yellow\ff_light_flash_yellow.bloc
