@@ -170,6 +170,12 @@ AddBlockElements RevivingEquipment
 SetField RevivingEquipment[0].Instance objects\powerups\health_pack\health_pack_small.equipment
 savetagchanges
 exit
+#__________________________________________________________________________________________________
+edittag objects\characters\masterchief\mp_masterchief\lehto_spartan.biped
+AddBlockElements RevivingEquipment
+SetField RevivingEquipment[0].Instance objects\powerups\health_pack\health_pack_small.equipment
+savetagchanges
+exit
 
 // Forge Pallette
 RunCommands workingdir\cmds\ForgePalette.cmds
