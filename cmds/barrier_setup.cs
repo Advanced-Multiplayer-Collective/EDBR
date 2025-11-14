@@ -324,7 +324,7 @@ for (int i = 0; i < coords_list.Length; i++)
 		
 		if (cur_params[0] == "center")
 		{
-			GenerateCylinderVolume(radius: 100, numVertices: 16, baseZ: 0, height: 200, zSink: 200, offsetX: 0, offsetY: 0);
+			GenerateCylinderVolume(radius: 125, numVertices: 16, baseZ: 0, height: 200, zSink: 200, offsetX: 0, offsetY: 0);
 			cur_trigvol_idx++;
 		}
 		
