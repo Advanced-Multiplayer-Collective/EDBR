@@ -159,6 +159,9 @@ EditTag objects\vehicles\odst_pod\odst_pod.vehicle
 
 SetField DefaultModelVariant default
 
+SetField Seats[0].Flags BoardingSeat
+SetField Seats[0].BoardingSeat -1
+
 SaveTagChanges
 Exit
 
