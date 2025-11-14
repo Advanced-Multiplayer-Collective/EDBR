@@ -161,6 +161,7 @@ SetField DefaultModelVariant default
 
 SetField Seats[0].Flags BoardingSeat
 SetField Seats[0].BoardingSeat -1
+RemoveBlockElements Seats[0].UnitHudInterface 0 *
 
 SaveTagChanges
 Exit
