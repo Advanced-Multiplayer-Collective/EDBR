@@ -182,7 +182,7 @@
 			(if (!= (volume_test_object current_volume (player_get_by_idx 13)) true) (damage_object_effect barrier_damage (player_get_by_idx 13)) )
 			(if (!= (volume_test_object current_volume (player_get_by_idx 14)) true) (damage_object_effect barrier_damage (player_get_by_idx 14)) )
 			(if (!= (volume_test_object current_volume (player_get_by_idx 15)) true) (damage_object_effect barrier_damage (player_get_by_idx 15)) )
-			(sleep 8)
+			(sleep 15)
 			(= game_ended true)
 		)
 	5)
