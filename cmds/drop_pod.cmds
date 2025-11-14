@@ -57,6 +57,10 @@ Exit
 
 EditTag objects\vehicles\odst_pod\odst_pod.physics_model
 
+SetField RigidBodies[5].InertiaTensorY 0 100000 0
+SetField RigidBodies[5].InertiaTensorX 100000 0 17.42572
+SetField RigidBodies[5].InertiaTensorZ 17.42572 0 100000
+
 ForEach Boxes SetField ProxyCollisionGroup 2
 ForEach Polyhedra SetField ProxyCollisionGroup 2
 
