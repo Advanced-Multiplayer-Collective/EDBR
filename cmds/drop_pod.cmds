@@ -202,6 +202,14 @@ SetField ShieldImpactFirstPerson objects\battle_royale\pod_invisible_shield.shie
 SaveTagChanges
 Exit
 
+DuplicateTag camera\dropship_d_camera.camera_track camera\pod_d_camera
+EditTag camera\pod_d_camera.camera_track
+
+CS < "working_directory\commands\camera_track_offset.cs" -2
+
+SaveTagChanges
+Exit
+
 EditTag objects\vehicles\odst_pod\odst_pod.vehicle
 
 SetField DefaultModelVariant default
@@ -213,6 +221,9 @@ SetField Attachments[*].PrimaryScale shield_vitality
 SetField Seats[0].Flags Driver,BoardingSeat
 SetField Seats[0].BoardingSeat -1
 RemoveBlockElements Seats[0].UnitHudInterface 0 *
+
+AddBlockElements Seats[0].UnitCamera.CameraTracks
+SetField Seats[0].UnitCamera.CameraTracks[*].Track camera\pod_d_camera.camera_track
 
 SaveTagChanges
 Exit
