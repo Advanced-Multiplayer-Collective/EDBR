@@ -5,13 +5,13 @@
       <author>Blender User</author>
       <authoring_tool>Blender 4.1.1 commit date:2024-04-15, commit time:15:11, hash:e1743a0317bc</authoring_tool>
     </contributor>
-    <created>2025-11-09T07:38:32</created>
-    <modified>2025-11-09T07:38:32</modified>
+    <created>2025-11-14T23:10:17</created>
+    <modified>2025-11-14T23:10:17</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
   <library_effects>
-    <effect id="multiplayer_object_plasma-effect">
+    <effect id="barrier_shader-effect">
       <profile_COMMON>
         <technique sid="common">
           <lambert>
@@ -31,8 +31,8 @@
   </library_effects>
   <library_images/>
   <library_materials>
-    <material id="multiplayer_object_plasma-material" name="multiplayer_object_plasma">
-      <instance_effect url="#multiplayer_object_plasma-effect"/>
+    <material id="barrier_shader-material" name="barrier_shader">
+      <instance_effect url="#barrier_shader-effect"/>
     </material>
   </library_materials>
   <library_geometries>
@@ -70,7 +70,7 @@
         <vertices id="default_default-mesh-vertices">
           <input semantic="POSITION" source="#default_default-mesh-positions"/>
         </vertices>
-        <triangles material="multiplayer_object_plasma-material" count="1152">
+        <triangles material="barrier_shader-material" count="1152">
           <input semantic="VERTEX" source="#default_default-mesh-vertices" offset="0"/>
           <input semantic="NORMAL" source="#default_default-mesh-normals" offset="1"/>
           <input semantic="TEXCOORD" source="#default_default-mesh-map-0" offset="2" set="0"/>
@@ -141,7 +141,7 @@
             <skeleton>#barrier_root</skeleton>
             <bind_material>
               <technique_common>
-                <instance_material symbol="multiplayer_object_plasma-material" target="#multiplayer_object_plasma-material">
+                <instance_material symbol="barrier_shader-material" target="#barrier_shader-material">
                   <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
                 </instance_material>
               </technique_common>
