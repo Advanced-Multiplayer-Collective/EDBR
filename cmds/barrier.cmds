@@ -1,5 +1,21 @@
-# Standard barrier object is 200 wu X, 200 wu Y, 300 wu Z
+DuplicateTag objects\eldewrito\reforge\shaders\invisible.shader_halogram objects\battle_royale\barrier_shader
+EditTag objects\battle_royale\barrier_shader.shader_halogram
 
+SetArgument albedo_color 0.75 0.75 0.75 1
+SetArgument noise_map_a 16 16 0 16
+SetArgument noise_map_b 4 4 0 0
+SetArgument color_medium 1 0.5 0 1
+SetArgument color_sharp 1 0.5 0 1
+SetArgument self_illum_intensity 30
+SetArgument alpha_mask_map 16 16 0 0
+SetArgument overlay_map 96 96 0 0
+SetArgument overlay_tint 0.12 0.4 1 1
+SetArgument overlay_intensity 5
+
+SaveTagChanges
+Exit
+
+# Standard barrier object is 250 wu X, 250 wu Y, 400 wu Z
 DuplicateTag objects\gear\human\industrial\street_cone\street_cone.render_model objects\battle_royale\barrier_standard
 EditTag objects\battle_royale\barrier_standard.render_model
 StringId Add barrier
