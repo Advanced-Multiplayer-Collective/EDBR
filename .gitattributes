@@ -1,2 +1,1 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+net8.0-windows/* linguist-vendored=true
