@@ -50,7 +50,7 @@ CreateTag bipd objects\battle_royale\barrier_standard
 EditTag objects\battle_royale\barrier_standard.biped
 
 SetField ObjectType.Halo3ODST Biped
-SetField ObjectFlags.Flags DoesNotCastShadow,NotAPathfindingObstacle
+SetField ObjectFlags DoesNotCastShadow,NotAPathfindingObstacle
 SetField BoundingRadius 1000
 SetField Model objects\battle_royale\barrier_standard.model
 

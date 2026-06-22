@@ -1,0 +1,54 @@
+
+
+remove scenery weps from streets
+remove headshots from sniper
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-Added New map "Kizingo Blvd"
+-Added a New Circle to Streets
+-Added Target Locator
+-Added Concussion Rifle
+-Added Focus Rifle
+-Added Grenade Launcher
+-Added Needle Rifle
+-Added Plasma Repeater
+-Added Plasma Launcher
+-Added CE Assault Rifle
+-Added CE Magnum
+-Added Silenced SMG
+-Added Automag
+-Added "Flammer" Equipment
+-Fixed Health Pack effect
+-Increased Weapon starting ammo from 1 to 2 Magazines
+-Added more ladders to Streets Map
+-Reduced bloom on Streets
+-Reduced spawn chance of all Weapon Variants, Snipers, Sword/hammmers and rockets
+-Disabled HeadShots with Sniper rifles (Still a two shot)
+
+
+
+
+
+-Added Reach Assault Rifle
+-Added Reach DMR
+-Added Reach Shotgun
+-Added Reach Sniper
+-Added Reach Magnum
+
+-Added CE Sniper
+-Added CE Shotgun
+-Added H2 Battle Rifle
+

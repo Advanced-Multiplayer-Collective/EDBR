@@ -7,6 +7,7 @@ SetVariable modsfolder "D:\eldewrito\eldewrito 0.7\ElDewrito\mods"
 SetVariable odstmaps "E:\Halo Resources\Halo3odst"
 SetVariable reachmaps "E:\Halo Resources\HaloReach"
 SetVariable h3maps "E:\Halo Resources\Halo3"
+SetVariable Workshopdir "D:\Games\steamapps\workshop\content\976730"
 
 // Update at the end of the script
 CreateModPackage 1 Large
@@ -117,6 +118,48 @@ savetagchanges
 exit
 
 ################################################################################
+		// SC120 KIZINGO BLVD.
+################################################################################
+
+opencachefile "odstmaps\SC120.map"
+donotreplacegroups foot
+portmultiplayerscenario !Bipeds MPObject
+kizingoblvd
+32276
+Kizingo Blvd.
+Last man Standing wins!
+0
+
+
+Exit
+
+edittag levels\custom\kizingoblvd\kizingoblvd.scnr
+	# mid-range weapon start
+setfield PlayerStartingProfile[0].PrimaryWeapon objects\weapons\rifle\battle_rifle\battle_rifle.weap
+	# fix object spawning
+foreach Scenery setfield PlacementFlags.Flags none
+foreach Machines setfield PlacementFlags.Flags none
+foreach Crates setfield PlacementFlags.Flags none
+RemoveBlockElements Machines 0 *
+RemoveBlockElements MachinePalette 0 *
+RemoveBlockElements Vehicles 0 *
+RemoveBlockElements VehiclePalette 0 *
+RemoveBlockElements Equipment 0 *
+RemoveBlockElements EquipmentPalette 0 *
+RemoveBlockElements Weapons 0 *
+RemoveBlockElements WeaponPalette 0 *
+SetField CratePalette[21].Object null
+SetField CratePalette[22].Object null
+SaveTagChanges
+Exit
+
+EditTag levels\custom\kizingoblvd\kizingoblvd_bsp_0.scenario_structure_bsp
+SetField Materials[1].RenderMethod objects\eldewrito\reforge\shaders\terrain\tiled.shader
+savetagchanges
+exit
+
+
+################################################################################
 		// Health System
 ################################################################################
 
@@ -131,8 +174,8 @@ savetagchanges
 exit
 
 edittag objects\characters\masterchief\mp_masterchief\mp_masterchief.biped
-AddBlockElements RevivingEquipment
-SetField RevivingEquipment[0].Instance objects\powerups\health_pack\health_pack_small.equipment
+AddBlockElements HealthPacks
+SetField HealthPacks[0].Instance objects\powerups\health_pack\health_pack_small.equipment
 savetagchanges
 exit
 #__________________________________________________________________________________________________
@@ -143,8 +186,8 @@ savetagchanges
 exit
 
 edittag objects\characters\spartans\midnight_spartan.biped
-AddBlockElements RevivingEquipment
-SetField RevivingEquipment[0].Instance objects\powerups\health_pack\health_pack_small.equipment
+AddBlockElements HealthPacks
+SetField HealthPacks[0].Instance objects\powerups\health_pack\health_pack_small.equipment
 savetagchanges
 exit
 #__________________________________________________________________________________________________
@@ -155,8 +198,8 @@ savetagchanges
 exit
 
 edittag objects\characters\masterchief\ms23_mp_masterchief\ms23_mp_masterchief.biped
-AddBlockElements RevivingEquipment
-SetField RevivingEquipment[0].Instance objects\powerups\health_pack\health_pack_small.equipment
+AddBlockElements HealthPacks
+SetField HealthPacks[0].Instance objects\powerups\health_pack\health_pack_small.equipment
 savetagchanges
 exit
 #__________________________________________________________________________________________________
@@ -167,14 +210,36 @@ savetagchanges
 exit
 
 edittag objects\characters\masterchief\mp_masterchief\h4_spartan.biped
-AddBlockElements RevivingEquipment
-SetField RevivingEquipment[0].Instance objects\powerups\health_pack\health_pack_small.equipment
+AddBlockElements HealthPacks
+SetField HealthPacks[0].Instance objects\powerups\health_pack\health_pack_small.equipment
 savetagchanges
 exit
 #__________________________________________________________________________________________________
 edittag objects\characters\masterchief\mp_masterchief\lehto_spartan.biped
-AddBlockElements RevivingEquipment
-SetField RevivingEquipment[0].Instance objects\powerups\health_pack\health_pack_small.equipment
+AddBlockElements HealthPacks
+SetField HealthPacks[0].Instance objects\powerups\health_pack\health_pack_small.equipment
+savetagchanges
+exit
+
+#Fix Healh pack pickup effects due to EDs health pack code
+edittag objects\powerups\health_pack\health_pack_small.equipment
+setfield PickupSound sound\game_sfx\ui\pickup_health.sound
+setfield ActivateEffect objects\powerups\health_pack\fx\activate_large.effect
+setField RunningEffect null
+savetagchanges
+exit
+
+edittag objects\powerups\health_pack\health_pack_medium.equipment
+setfield PickupSound sound\game_sfx\ui\pickup_health.sound
+setfield ActivateEffect objects\powerups\health_pack\fx\activate_large.effect
+setField RunningEffect null
+savetagchanges
+exit
+
+edittag objects\powerups\health_pack\health_pack_large.equipment
+setfield PickupSound sound\game_sfx\ui\pickup_health.sound
+setfield ActivateEffect objects\powerups\health_pack\fx\activate_large.effect
+setField RunningEffect null
 savetagchanges
 exit
 
@@ -219,6 +284,11 @@ echo ==MORE REFORGE BLOCK==
 RunCommands "workingdir\cmds\extra_reforge_0.1.cmds"
 RunCommands "workingdir\cmds\extra_reforge_0.5.cmds"
 RunCommands "workingdir\cmds\extra_reforge_1.cmds"
+
+echo ==Extra Weapons==
+
+RunCommands "workingdir\cmds\weapons.cmds"
+RunCommands "workingdir\cmds\equipment.cmds"
 
 
 AddModFiles "workingdir\assets"

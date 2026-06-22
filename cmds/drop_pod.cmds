@@ -99,7 +99,7 @@ Exit
 EditTag objects\vehicles\odst_pod\odst_pod.model
 
 # Flap
-SetField Variants[0].Regions[1].Permutations[0].Name null
+SetField Variants[0].Regions[1].Permutations[0].Name NULL
 SetField Variants[0].Regions[1].Permutations[0].RenderModelPermutationIndex -1
  
 # Outside door

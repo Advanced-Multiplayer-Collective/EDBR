@@ -1,0 +1,1716 @@
+
+EditTag multiplayer\multiplayer_globals.multiplayer_globals
+SetField Universal[0].GameVariantWeapons[10].RandomChance 0.025
+SetField Universal[0].GameVariantWeapons[12].RandomChance 0.025
+SetField Universal[0].GameVariantWeapons[15].RandomChance 0.025
+SetField Universal[0].GameVariantWeapons[16].RandomChance 0.025
+SetField Universal[0].GameVariantWeapons[18].RandomChance 0.025
+SetField Universal[0].GameVariantWeapons[20].RandomChance 0.025
+SetField Universal[0].GameVariantWeapons[21].RandomChance 0.025
+SetField Universal[0].GameVariantWeapons[23].RandomChance 0.025
+SetField Universal[0].GameVariantWeapons[26].RandomChance 0
+SetField Universal[0].GameVariantWeapons[27].RandomChance 0
+SetField Universal[0].GameVariantWeapons[28].RandomChance 0
+SetField Universal[0].GameVariantWeapons[30].RandomChance 0
+SetField Universal[0].GameVariantWeapons[31].RandomChance 0
+SetField Universal[0].GameVariantWeapons[32].RandomChance 0
+SetField Universal[0].GameVariantWeapons[33].RandomChance 0
+SetField Universal[0].GameVariantWeapons[34].RandomChance 0
+SetField Universal[0].GameVariantWeapons[35].RandomChance 0
+SetField Universal[0].GameVariantWeapons[36].RandomChance 0
+SetField Universal[0].GameVariantWeapons[37].RandomChance 0
+SetField Universal[0].GameVariantWeapons[38].RandomChance 0
+SetField Universal[0].GameVariantWeapons[39].RandomChance 0
+SetField Universal[0].GameVariantWeapons[40].RandomChance 0
+SetField Universal[0].GameVariantWeapons[42].RandomChance 0
+SetField Universal[0].GameVariantWeapons[44].RandomChance 0
+SetField Universal[0].GameVariantWeapons[45].RandomChance 0
+SetField Universal[0].GameVariantWeapons[46].RandomChance 0
+SetField Universal[0].GameVariantWeapons[48].RandomChance 0
+SetField Universal[0].GameVariantWeapons[54].RandomChance 0
+SetField Universal[0].GameVariantWeapons[55].RandomChance 0
+SetField Universal[0].GameVariantWeapons[56].RandomChance 0
+SetField Universal[0].GameVariantWeapons[57].RandomChance 0
+SetField Universal[0].GameVariantWeapons[58].RandomChance 0
+SetField Universal[0].GameVariantWeapons[59].RandomChance 0
+SetField Universal[0].GameVariantWeapons[60].RandomChance 0
+SetField Universal[0].GameVariantWeapons[63].RandomChance 0
+SetField Universal[0].GameVariantWeapons[65].RandomChance 0
+SetField Universal[0].GameVariantWeapons[66].RandomChance 0
+SetField Universal[0].GameVariantWeapons[67].RandomChance 0
+savetagchanges
+exit
+
+Echo Disable headshots for Sniper
+
+EditTag objects\weapons\rifle\sniper_rifle\damage_effects\sniper_rifle_bullet.damage_effect
+SetField Flags IgnoreSeatScaleForDirDmg,ForcesHardPing
+savetagchanges
+exit
+
+
+# ------------------------
+#ECHO |       TARGET lOCATOR    |
+# ------------------------
+
+
+# ------------------------
+# |        PORTING       |
+# ------------------------
+OpenCacheFile reachmaps\m20.map
+
+PortTag objects\weapons\pistol\target_laser\projectiles\airstrike_radius\airstrike_radius.model
+
+PortTag sound\weapons\target_laser\fire_locator.effect
+PortTag objects\gear\human\military\missle\shaders\missile.shader
+PortTag objects\weapons\pistol\target_laser\fx\projectile.effect
+PortTag sound\weapons\target_laser\artilary_proj_loop\artilary_proj_loop.sound_looping
+PortTag objects\weapons\pistol\target_laser\fx\detonation.effect
+
+PortTag objects\weapons\pistol\target_laser\shaders\target_laser_composite.shader
+PortTag objects\weapons\pistol\target_laser\shaders\target_laser_holster.shader
+PortTag objects\weapons\pistol\target_laser\shaders\target_laser_lens.shader
+PortTag objects\weapons\pistol\target_laser\shaders\target_laser_metal.shader
+PortTag objects\weapons\pistol\target_laser\shaders\target_laser_rubber.shader
+PortTag objects\bitmaps\decals\shaders\unsc_decals_fp.shader
+# PortTag objects\weapons\pistol\target_laser\shaders\target_laser_charging.shader
+# PortTag objects\weapons\pistol\target_laser\shaders\target_laser_counter.shader
+PortTag objects\weapons\rifle\dmr\bitmaps\numbers_plate_dmr.bitmap
+PortTag objects\weapons\pistol\target_laser\shaders\target_laser_lens_glass.shader
+# PortTag objects\weapons\pistol\target_laser\shaders\target_laser_reticles.shader
+PortTag objects\weapons\pistol\target_laser\bitmaps\target_laser_reticles.bitmap
+# PortTag objects\weapons\pistol\target_laser\shaders\target_laser_screen.shader
+PortTag objects\weapons\pistol\target_laser\bitmaps\target_laser_screens.bitmap
+PortTag objects\weapons\pistol\target_laser\shaders\target_laser_timer.shader
+
+Exit
+
+# HELL
+OpenCacheFile Workshopdir\3372578060\maps\070_waste.map
+NameBlamTag dw3\r3ach\objects\weapons\pistol\target_laser\bitmaps\numbers_plate_dmr.bitmap objects\weapons\rifle\dmr\bitmaps\numbers_plate_dmr
+NameBlamTag dw3\r3ach\objects\weapons\pistol\target_laser\bitmaps\target_laser_reticles.bitmap objects\weapons\pistol\target_laser\bitmaps\target_laser_reticles
+NameBlamTag dw3\r3ach\objects\bitmaps\other\glass_shattered.bitmap objects\bitmaps\detail_maps\glass_shattered
+NameBlamTag shaders\default_bitmaps\bitmaps\default_detail.bitmap reach\shaders\default_bitmaps\bitmaps\default_detail
+NameBlamTag dw3\r3ach\objects\weapons\pistol\target_laser\bitmaps\target_laser_screens.bitmap objects\weapons\pistol\target_laser\bitmaps\target_laser_screens
+
+PortTag dw3\r3ach\objects\weapons\pistol\target_laser\shaders\target_laser_charging.shader
+PortTag dw3\r3ach\objects\weapons\pistol\target_laser\shaders\target_laser_counter.shader
+PortTag dw3\r3ach\objects\weapons\pistol\target_laser\shaders\target_laser_reticles.shader
+PortTag dw3\r3ach\objects\weapons\pistol\target_laser\shaders\target_laser_screen.shader
+# PortTag dw3\r3ach\objects\weapons\pistol\target_laser\shaders\target_laser_screen_black.shader
+PortTag dw3\r3ach\objects\weapons\pistol\target_laser\shaders\target_laser_screen_charge.shader
+PortTag dw3\r3ach\objects\weapons\pistol\target_laser\shaders\target_laser_screen_cooldown.shader
+PortTag dw3\r3ach\objects\weapons\pistol\target_laser\shaders\target_laser_timer.shader
+Exit
+
+# ------------------------
+# |        SHADER        |
+# ------------------------
+EditTag objects\weapons\pistol\target_laser\shaders\target_laser_timer.shader
+SetField ShaderProperties[0].Functions[0].InputName show_after_firing
+SetField ShaderProperties[0].Functions[0].TimePeriod 1
+SetField ShaderProperties[0].Functions[0].Function.Data 08340200000000FF5E8C4C00272614000DFF0DFF0000000000000000240000000200000004000000CDCCCC3D000020410000000004000000FFFF7F7F000000000000803F
+
+SetField ShaderProperties[0].Functions[1].InputName show_after_firing
+SetField ShaderProperties[0].Functions[2].InputName heat
+SaveTagChanges
+Exit
+
+EditTag objects\weapons\pistol\target_laser\projectiles\airstrike_radius\shaders\airstrike_radius.shader_halogram
+SetArgument depth_fade_range 2
+SaveTagChanges
+Exit
+
+StringId Add hide_when_ammo_depleted
+StringId Add show_when_ammo_depleted
+
+EditTag dw3\r3ach\objects\weapons\pistol\target_laser\shaders\target_laser_counter.shader
+AddBlockElements ShaderProperties[0].Functions
+SetField ShaderProperties[0].Functions[3].TimePeriod 1
+SetField ShaderProperties[0].Functions[3].InputName hide_when_ammo_depleted
+SetField ShaderProperties[0].Functions[3].Function.Data 00340000000000000000803F0000000000000000000000000000000000000000
+
+AddFunction self_illum_map Real 3
+SaveTagChanges
+Exit
+
+EditTag dw3\r3ach\objects\weapons\pistol\target_laser\shaders\target_laser_screen.shader
+SetField ShaderProperties[0].Functions[2].Function.Data 0034000000000000605F5F3F0000000000000000000000000000000000000000
+
+AddBlockElements ShaderProperties[0].Functions
+SetField ShaderProperties[0].Functions[3].TimePeriod 1
+SetField ShaderProperties[0].Functions[3].InputName hide_when_ammo_depleted
+SetField ShaderProperties[0].Functions[3].Function.Data 00340000000000000000803F0000000000000000000000000000000000000000
+
+AddFunction self_illum_map Real 3
+SaveTagChanges
+Exit
+
+DuplicateTag dw3\r3ach\objects\weapons\pistol\target_laser\shaders\target_laser_screen.shader dw3\r3ach\objects\weapons\pistol\target_laser\shaders\target_laser_screen_black
+EditTag dw3\r3ach\objects\weapons\pistol\target_laser\shaders\target_laser_screen_black.shader
+SetField ShaderProperties[0].TextureConstants[2].BitmapIndex 6
+SetField ShaderProperties[0].Functions[3].InputName show_when_ammo_depleted
+
+SetArgument base_map 0 0 0 0
+SetArgument detail_map 0 0 0 0
+SetArgument albedo_color 0 0 0 0
+SaveTagChanges
+Exit
+
+EditTag dw3\r3ach\objects\weapons\pistol\target_laser\shaders\target_laser_screen_charge.shader
+SetField ShaderProperties[0].Functions[3].Function.Data 0034000000000000605F5F3F0000000000000000000000000000000000000000
+SaveTagChanges
+Exit
+
+EditTag dw3\r3ach\objects\weapons\pistol\target_laser\shaders\target_laser_screen_cooldown.shader
+SetField ShaderProperties[0].Functions[2].Function.Data 0034000000000000605F5F3F0000000000000000000000000000000000000000
+SaveTagChanges
+Exit
+
+EditTag objects\weapons\pistol\target_laser\shaders\target_laser_lens_glass.shader
+SetArgument env_tint_color 0.5 0.5 0.5
+SaveTagChanges
+Exit
+
+# ------------------------
+# |     RENDER MODEL     |
+# ------------------------
+stringid add mineleloldabest_left_hand_spartan_fp
+StringId add right_hand_spartan
+CreateTag mode dw3\r3ach\objects\weapons\pistol\target_laser\target_laser
+ImportTag dw3\r3ach\objects\weapons\pistol\target_laser\target_laser.render_model workingdir\tags\weapons\VKMT\target_laser.render_model
+EditTag dw3\r3ach\objects\weapons\pistol\target_laser\target_laser.render_model
+
+SetField MarkerGroups[6].Name right_hand_spartan
+
+SetField Materials[0].RenderMethod objects\weapons\pistol\target_laser\shaders\target_laser_composite.shader
+SetField Materials[1].RenderMethod objects\weapons\pistol\target_laser\shaders\target_laser_holster.shader
+SetField Materials[2].RenderMethod objects\weapons\pistol\target_laser\shaders\target_laser_lens.shader
+SetField Materials[3].RenderMethod objects\weapons\pistol\target_laser\shaders\target_laser_metal.shader
+SetField Materials[4].RenderMethod objects\weapons\pistol\target_laser\shaders\target_laser_rubber.shader
+SetField Materials[5].RenderMethod objects\bitmaps\decals\shaders\unsc_decals_fp.shader
+SetField Materials[6].RenderMethod dw3\r3ach\objects\weapons\pistol\target_laser\shaders\target_laser_charging.shader
+SetField Materials[7].RenderMethod dw3\r3ach\objects\weapons\pistol\target_laser\shaders\target_laser_counter.shader
+SetField Materials[8].RenderMethod objects\weapons\pistol\target_laser\shaders\target_laser_lens_glass.shader
+SetField Materials[9].RenderMethod dw3\r3ach\objects\weapons\pistol\target_laser\shaders\target_laser_reticles.shader
+SetField Materials[10].RenderMethod dw3\r3ach\objects\weapons\pistol\target_laser\shaders\target_laser_screen.shader
+SetField Materials[11].RenderMethod dw3\r3ach\objects\weapons\pistol\target_laser\shaders\target_laser_screen_black.shader
+SetField Materials[12].RenderMethod dw3\r3ach\objects\weapons\pistol\target_laser\shaders\target_laser_screen_charge.shader
+SetField Materials[13].RenderMethod dw3\r3ach\objects\weapons\pistol\target_laser\shaders\target_laser_screen_cooldown.shader
+SetField Materials[14].RenderMethod objects\weapons\pistol\target_laser\shaders\target_laser_timer.shader
+
+RemoveBlockElements Regions 0 *
+ReplaceRenderGeometry workingdir\models\TL\target_laser.fbx TriangleStrip
+
+AddBlockElements MarkerGroups
+AddBlockElements MarkerGroups[*].Markers
+SetField MarkerGroups[*].Name mineleloldabest_left_hand_spartan_fp
+SetField MarkerGroups[*].Markers[*].RegionIndex -1
+SetField MarkerGroups[*].Markers[*].PermutationIndex -1
+SetField MarkerGroups[*].Markers[*].Translation 0.004 -0.00277 -0.0188
+SetField MarkerGroups[*].Markers[*].Rotation -0.473 -0.02672 -0.3264 0.8179152
+SaveTagChanges
+Exit
+
+# ------------------------
+# |        PORTING       |
+# ------------------------
+OpenCacheFile Workshopdir\3372578060\maps\070_waste.map
+NameBlamTag dw3\r3ach\objects\weapons\pistol\target_laser\target_laser.weapon objects\weapons\pistol\target_laser\target_laser
+NameBlamTag dw3\r3ach\ui\chud\target_locator.chud_definition ui\chud\target_laser
+
+NameBlamTag dw3\r3ach\objects\weapons\pistol\target_laser\firing.effect sound\weapons\target_laser\fire_locator
+NameBlamTag dw3\r3ach\objects\weapons\pistol\target_laser\projectiles\missile\shaders\missile.shader objects\gear\human\military\missle\shaders\missile
+NameBlamTag objects\weapons\support_high\rocket_launcher\fx\projectile.effect objects\weapons\pistol\target_laser\fx\projectile
+NameBlamTag sound\weapons\rocket_launcher\rocket_proj\rocket_proj.sound_looping sound\weapons\target_laser\artilary_proj_loop\artilary_proj_loop
+NameBlamTag dw3\r3ach\objects\weapons\pistol\target_laser\projectiles\missile\effects\detonation.effect objects\weapons\pistol\target_laser\fx\detonation
+
+PortTag dw3\r3ach\objects\weapons\pistol\target_laser\target_laser.model
+PortTag dw3\r3ach\sound\weapons\target_laser\targetlocator_fire_loop\targetlocator_fire_loop.sound_looping
+PortTag dw3\r3ach\objects\weapons\pistol\target_laser\animations\fp_spartan\fp_spartan.model_animation_graph
+PortTag dw3\r3ach\objects\weapons\pistol\target_laser\animations\fp_elite\fp_elite.model_animation_graph
+PortTag dw3\r3ach\objects\weapons\pistol\target_laser\projectiles\tracer\tracer.projectile
+PortTag dw3\r3ach\objects\weapons\pistol\target_laser\projectiles\tracer\firing_tracer.effect
+PortTag dw3\r3ach\objects\weapons\pistol\target_laser\projectiles\airstrike_marker.projectile
+PortTag ui\chud\target_laser.chud_definition
+# PortTag dw3\r3ach\objects\weapons\pistol\target_laser\firing.effect
+
+PortTag Replace Single objects\weapons\pistol\target_laser\target_laser.weapon
+Exit
+
+# ------------------------
+# |         MODEL        |
+# ------------------------
+EditTag dw3\r3ach\objects\weapons\pistol\target_laser\target_laser.model
+SetField DisappearDistance 10
+SetField BeginFadeDistance 7
+UpdateModelRegions phmo coll
+SaveTagChanges
+Exit
+
+# ------------------------
+# |      PROJECTILE      |
+# ------------------------
+EditTag dw3\r3ach\objects\weapons\pistol\target_laser\projectiles\airstrike_marker.projectile
+SetField BoundingRadius 3
+SetField Model objects\weapons\pistol\target_laser\projectiles\airstrike_radius\airstrike_radius.model
+SetField ArmingTime 1.5
+SetField Timer 1.5 1.5
+SaveTagChanges
+Exit
+
+DuplicateTag dw3\r3ach\objects\weapons\pistol\target_laser\projectiles\airstrike_marker.projectile dw3\r3ach\objects\weapons\pistol\target_laser\projectiles\airstrike_marker2
+EditTag dw3\r3ach\objects\weapons\pistol\target_laser\projectiles\airstrike_marker2.projectile
+SetField BoundingRadius 3
+SetField Model objects\weapons\pistol\target_laser\projectiles\airstrike_radius\airstrike_radius.model
+SetField AirborneDetonationEffect null
+SetField GroundDetonationEffect null
+SetField InitialVelocity 0
+SetField FinalVelocity 0
+SetField ArmingTime 8
+SetField Timer 8 8
+SaveTagChanges
+Exit
+
+# ------------------------
+# |        EFFECT        |
+# ------------------------
+EditTag dw3\r3ach\objects\weapons\pistol\target_laser\projectiles\airstrike_marker.effect
+CopyBlockElements Events[0].Parts 0 1
+PasteBlockElements Events[0].Parts
+SetField Events[0].Parts[1].Type dw3\r3ach\objects\weapons\pistol\target_laser\projectiles\airstrike_marker2.projectile
+SaveTagChanges
+Exit
+
+EditTag dw3\r3ach\objects\weapons\pistol\target_laser\projectiles\airstrike\airstrike.effect
+ForEach Events SetField Parts[0].RelativeOffset -250 0 0
+SaveTagChanges
+Exit
+
+EditTag objects\weapons\pistol\target_laser\fx\projectile.effect
+SetField Locations[0].MarkerName exhaust
+SaveTagChanges
+Exit
+
+# ------------------------
+# |         SOUND        |
+# ------------------------
+EditTag sound\dialog\target_laser\targeted.sound
+SetField SoundClass UnitDialog
+SetField Playback.DistanceParameters.MinimumDistance 1
+SetField Playback.DistanceParameters.MaximumDistance 75
+SaveTagChanges
+Exit
+
+# ------------------------
+# |        WEAPON        |
+# ------------------------
+EditTag objects\weapons\pistol\target_laser\target_laser.weapon
+
+AddBlockElements Functions
+SetField Functions[*].ImportName primary_ammunition
+SetField Functions[*].ExportName hide_when_ammo_depleted
+SetField Functions[*].DefaultFunction.Data 083400000000803F00000000000000000000000000000000000000002400000002000000040000CD6F12833AFFFF79C40000803F04000000FFFF7F7F0000000000000000
+
+AddBlockElements Functions
+SetField Functions[*].ImportName primary_ammunition
+SetField Functions[*].ExportName show_when_ammo_depleted
+SetField Functions[*].DefaultFunction.Data 083400000000803F00000000000000000000000000000000000000002400000002000000040000CD6F12833AFFFF79440000000004000000FFFF7F7F000000000000803F
+
+SetField WeaponName hp
+SetField Triggers[0].Charging.ChargedDrainRate 0.0001
+SaveTagChanges
+Exit
+
+# Remove ts once we're done with weapon port
+AddForgeItem "TARGET LOCATOR" 1 objects\weapons\pistol\target_laser\target_laser.weapon
+
+# ------------------------------------
+# |          Animation        |
+# ------------------------------------
+EditTag dw3\r3ach\objects\weapons\pistol\target_laser\animations\fp_spartan\fp_spartan.model_animation_graph
+AddAnimation workingdir\animations\spartan_fp\targetlaser
+SortModes
+
+SetField Animations[3].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[13].PlaybackFlags DisableWeaponIk
+SetField Animations[23].PlaybackFlags DisableWeaponIk
+SetField Animations[25].PlaybackFlags DisableWeaponIk
+SetField Animations[24].PlaybackFlags DisableWeaponIk
+SetField Animations[22].PlaybackFlags DisableWeaponIk
+
+SetField Animations[3].AnimationData.FrameEvents[1].TypeED SecondaryKeyframe
+SetField Animations[3].AnimationData.FrameEvents[2].TypeED AllowInterruption
+
+SetField Animations[15].AnimationData.FrameEvents[1].TypeED SecondaryKeyframe
+SetField Animations[15].AnimationData.FrameEvents[2].TypeED AllowInterruption
+
+SetField Animations[16].AnimationData.FrameEvents[1].TypeED SecondaryKeyframe
+SetField Animations[16].AnimationData.FrameEvents[2].TypeED AllowInterruption
+
+AddBlockElements Modes[0].WeaponClass[0].WeaponIk
+SetField Modes[0].WeaponClass[0].WeaponIk[0].Marker left_hand
+SetField Modes[0].WeaponClass[0].WeaponIk[0].AttachToMarker mineleloldabest_left_hand_spartan_fp
+SaveTagChanges
+Exit
+
+#
+# |View Model|
+#
+
+EditTag ui\weapon_type_names.multilingual_unicode_string_list
+SetString english offset_target_laser "TARGET LOCATOR"
+savetagchanges
+exit
+
+EditTag objects\weapons\pistol\target_laser\target_laser.weapon
+SetField WeaponTypeName offset_target_laser
+SetField CenteredFirstPersonWeaponOffset 0 0 -0.02
+SaveTagChanges
+Exit
+
+#
+# |Add to Globals|
+#
+
+StringId Add target_laser
+EditTag multiplayer\multiplayer_globals.multiplayer_globals
+AddBlockElements Universal[0].GameVariantWeapons
+SetField Universal[0].GameVariantWeapons[*].RandomChance 0.025
+SetField Universal[0].GameVariantWeapons[*].Weapon objects\weapons\pistol\target_laser\target_laser.weapon
+SetField Universal[0].GameVariantWeapons[*].Name target_laser
+savetagchanges
+Exit
+
+
+
+
+
+
+
+
+
+
+
+
+#
+#ECHO ||||CONCUSSION RIFLE|||
+#
+
+OpenCacheFile Workshopdir\3372578060\maps\070_waste.map
+SetPortingOption BitmapFormatOptimization False
+porttag dw3\r3ach\objects\weapons\rifle\concussion_rifle\concussion_rifle.weapon
+exit
+
+OpenCacheFile reachmaps\20_sword_slayer.map
+SetPortingOption HqNormalMapConversion True
+NameBlamTag objects\weapons\rifle\concussion_rifle\bitmaps\concussion_rifle_normal.bitmap dw3\r3ach\objects\weapons\rifle\concussion_rifle\bitmaps\concussion_rifle_normal
+NameBlamTag objects\vehicles\covenant\banshee\bitmaps\banshee_detail_bump.bitmap dw3\r3ach\objects\bitmaps\detail\banshee_detail_bump
+porttag replace dw3\r3ach\objects\weapons\rifle\concussion_rifle\bitmaps\concussion_rifle_normal.bitmap
+porttag replace dw3\r3ach\objects\bitmaps\detail\banshee_detail_bump.bitmap
+exit
+
+# ------------------------------------
+# |        ANIMATIONS          |
+# ------------------------------------
+EditTag dw3\r3ach\objects\weapons\rifle\concussion_rifle\animations\fp_spartan\fp_spartan.model_animation_graph
+AddAnimation workingdir\animations\spartan_fp\concussionrifle
+SortModes
+
+SetField Animations[6].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[15].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[16].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[24].PlaybackFlags DisableWeaponIk
+SetField Animations[25].PlaybackFlags ForceWeaponIkOn
+
+SetField Animations[13].Weight 0.6
+SetField Animations[13].AnimationData.NextAnimation 14
+SetField Animations[14].Weight 1
+SetField Animations[14].AnimationData.ParentAnimation 13
+SetField Animations[14].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+
+SetField Animations[5].AnimationData.FrameEvents[1].TypeED SecondaryKeyframe
+SetField Animations[5].AnimationData.FrameEvents[2].TypeED AllowInterruption
+
+SetField Animations[6].AnimationData.FrameEvents[1].TypeED SecondaryKeyframe
+SetField Animations[6].AnimationData.FrameEvents[2].TypeED AllowInterruption
+
+SetField Animations[15].AnimationData.FrameEvents[1].TypeED AllowInterruption
+
+SetField Animations[16].AnimationData.FrameEvents[1].TypeED AllowInterruption
+
+SetField Animations[17].AnimationData.FrameEvents[1].TypeED SecondaryKeyframe
+SetField Animations[17].AnimationData.FrameEvents[2].TypeED AllowInterruption
+
+SetField Animations[18].AnimationData.FrameEvents[1].TypeED SecondaryKeyframe
+SetField Animations[18].AnimationData.FrameEvents[2].TypeED AllowInterruption
+
+AddBlockElements Modes[0].WeaponClass[0].WeaponIk
+SetField Modes[0].WeaponClass[0].WeaponIk[0].Marker left_hand
+SetField Modes[0].WeaponClass[0].WeaponIk[0].AttachToMarker mineleloldabest_left_hand_spartan_fp
+SaveTagChanges
+Exit
+
+
+#
+# |View Model|
+#
+
+EditTag ui\weapon_type_names.multilingual_unicode_string_list
+SetString english offset_concussion_rifle "CONCUSSION RIFLE"
+savetagchanges
+exit
+
+EditTag dw3\r3ach\objects\weapons\rifle\concussion_rifle\concussion_rifle.weapon
+SetField WeaponTypeName offset_concussion_rifle
+SaveTagChanges
+Exit
+
+#
+# |Add to Globals|
+#
+
+StringId Add concussion_rifle
+EditTag multiplayer\multiplayer_globals.multiplayer_globals
+AddBlockElements Universal[0].GameVariantWeapons
+SetField Universal[0].GameVariantWeapons[*].RandomChance 0.05
+SetField Universal[0].GameVariantWeapons[*].Weapon dw3\r3ach\objects\weapons\rifle\concussion_rifle\concussion_rifle.weapon
+SetField Universal[0].GameVariantWeapons[*].Name concussion_rifle
+savetagchanges
+Exit
+
+
+AddForgeItem "Concussion Rifle" 1 dw3\r3ach\objects\weapons\rifle\concussion_rifle\concussion_rifle.weapon
+
+
+
+
+
+#
+#ECHO ||||FOCUS RIFLE|||
+#
+
+OpenCacheFile Workshopdir\3372578060\maps\070_waste.map
+SetPortingOption BitmapFormatOptimization False
+porttag dw3\r3ach\objects\weapons\rifle\focus_rifle\focus_rifle.weapon
+exit
+
+OpenCacheFile reachmaps\20_sword_slayer.map
+SetPortingOption HqNormalMapConversion True
+NameBlamTag objects\weapons\rifle\focus_rifle\bitmaps\focus_rifle_normal.bitmap dw3\r3ach\objects\weapons\rifle\focus_rifle\bitmaps\focus_rifle_normal
+NameBlamTag objects\weapons\rifle\assault_rifle\bitmaps\gun_microbump.bitmap dw3\r3ach\objects\bitmaps\detail\gun_microbump
+NameBlamTag objects\weapons\rifle\assault_rifle\bitmaps\rubber_microbump.bitmap dw3\r3ach\objects\bitmaps\detail\rubber_microbump
+porttag replace dw3\r3ach\objects\weapons\rifle\focus_rifle\bitmaps\focus_rifle_normal.bitmap
+porttag replace dw3\r3ach\objects\bitmaps\detail\gun_microbump.bitmap
+porttag replace dw3\r3ach\objects\bitmaps\detail\rubber_microbump.bitmap
+exit
+
+# ------------------------------------
+# |          ANIMATION           |
+# ------------------------------------
+EditTag dw3\r3ach\objects\weapons\rifle\focus_rifle\animations\fp_spartan\fp_spartan.model_animation_graph
+AddAnimation workingdir\animations\spartan_fp\focusrifle
+SortModes
+
+SetField Animations[8].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[12].PlaybackFlags DisableWeaponIk
+SetField Animations[13].PlaybackFlags DisableWeaponIk
+SetField Animations[17].PlaybackFlags DisableWeaponIk
+SetField Animations[24].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+
+SetField Animations[19].Weight 0.6
+SetField Animations[19].AnimationData.NextAnimation 20
+SetField Animations[20].Weight 1
+SetField Animations[20].AnimationData.ParentAnimation 19
+SetField Animations[20].PlaybackFlags ForceWeaponIkOn
+
+SetField Animations[8].AnimationData.FrameEvents[1].TypeED SecondaryKeyframe
+SetField Animations[8].AnimationData.FrameEvents[2].TypeED AllowInterruption
+
+SetField Animations[9].AnimationData.FrameEvents[1].TypeED SecondaryKeyframe
+SetField Animations[9].AnimationData.FrameEvents[2].TypeED AllowInterruption
+
+SetField Animations[22].AnimationData.FrameEvents[1].TypeED SecondaryKeyframe
+SetField Animations[22].AnimationData.FrameEvents[2].TypeED AllowInterruption
+
+SetField Animations[23].AnimationData.FrameEvents[1].TypeED SecondaryKeyframe
+SetField Animations[23].AnimationData.FrameEvents[2].TypeED AllowInterruption
+
+SetField Animations[24].AnimationData.FrameEvents[1].TypeED SecondaryKeyframe
+SetField Animations[24].AnimationData.FrameEvents[2].TypeED AllowInterruption
+
+AddBlockElements Modes[0].WeaponClass[0].WeaponIk
+SetField Modes[0].WeaponClass[0].WeaponIk[0].Marker left_hand
+SetField Modes[0].WeaponClass[0].WeaponIk[0].AttachToMarker mineleloldabest_left_hand_spartan_fp
+SaveTagChanges
+Exit
+
+
+#
+# |View Model|
+#
+
+StringId Add offset_focus_rifle
+EditTag ui\weapon_type_names.multilingual_unicode_string_list
+SetString english offset_focus_rifle "FOCUS RIFLE"
+savetagchanges
+exit
+
+EditTag dw3\r3ach\objects\weapons\rifle\focus_rifle\focus_rifle.weapon
+SetField WeaponTypeName offset_focus_rifle
+SaveTagChanges
+Exit
+
+#
+# |Add to Globals|
+#
+
+StringId Add focus_rifle
+EditTag multiplayer\multiplayer_globals.multiplayer_globals
+AddBlockElements Universal[0].GameVariantWeapons
+SetField Universal[0].GameVariantWeapons[*].RandomChance 0.1
+SetField Universal[0].GameVariantWeapons[*].Weapon dw3\r3ach\objects\weapons\rifle\focus_rifle\focus_rifle.weapon
+SetField Universal[0].GameVariantWeapons[*].Name focus_rifle
+savetagchanges
+Exit
+
+
+AddForgeItem "Focus Rifle" 1 dw3\r3ach\objects\weapons\rifle\focus_rifle\focus_rifle.weapon
+
+
+
+#
+#ECHO ||||Grenade Launcher|||
+#
+
+OpenCacheFile Workshopdir\3372578060\maps\070_waste.map
+SetPortingOption BitmapFormatOptimization False
+porttag dw3\r3ach\objects\weapons\rifle\grenade_launcher\grenade_launcher.weapon
+exit
+
+OpenCacheFile reachmaps\20_sword_slayer.map
+SetPortingOption HqNormalMapConversion True
+NameBlamTag objects\weapons\rifle\grenade_launcher\bitmaps\grenade_launcher_zbump.bitmap dw3\r3ach\objects\weapons\rifle\grenade_launcher\bitmaps\grenade_launcher_zbump
+NameBlamTag objects\weapons\rifle\assault_rifle\bitmaps\gun_microbump.bitmap dw3\r3ach\objects\bitmaps\detail\gun_microbump
+porttag replace dw3\r3ach\objects\weapons\rifle\grenade_launcher\bitmaps\grenade_launcher_zbump.bitmap
+porttag replace dw3\r3ach\objects\bitmaps\detail\gun_microbump.bitmap
+exit
+
+# ------------------------------------
+# |         Animation         |
+# ------------------------------------
+EditTag dw3\r3ach\objects\weapons\rifle\grenade_launcher\animations\fp_spartan\fp_spartan.model_animation_graph
+AddAnimation workingdir\animations\spartan_fp\grenadelauncher
+SortModes
+
+SetField Animations[5].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[4].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[14].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[15].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[24].PlaybackFlags DisableWeaponIk
+
+SetField Animations[12].Weight 0.6
+SetField Animations[12].AnimationData.NextAnimation 13
+SetField Animations[13].Weight 1
+SetField Animations[13].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[13].AnimationData.ParentAnimation 12
+
+SetField Animations[4].AnimationData.FrameEvents[1].TypeED SecondaryKeyframe
+SetField Animations[4].AnimationData.FrameEvents[2].TypeED AllowInterruption
+
+SetField Animations[5].AnimationData.FrameEvents[1].TypeED SecondaryKeyframe
+SetField Animations[5].AnimationData.FrameEvents[2].TypeED AllowInterruption
+
+SetField Animations[14].AnimationData.FrameEvents[1].TypeED AllowInterruption
+
+SetField Animations[15].AnimationData.FrameEvents[1].TypeED AllowInterruption
+
+SetField Animations[16].AnimationData.FrameEvents[1].TypeED SecondaryKeyframe
+SetField Animations[16].AnimationData.FrameEvents[2].TypeED AllowInterruption
+
+SetField Animations[17].AnimationData.FrameEvents[1].TypeED SecondaryKeyframe
+SetField Animations[17].AnimationData.FrameEvents[2].TypeED AllowInterruption
+
+AddBlockElements Modes[0].WeaponClass[0].WeaponIk
+SetField Modes[0].WeaponClass[0].WeaponIk[0].Marker left_hand
+SetField Modes[0].WeaponClass[0].WeaponIk[0].AttachToMarker mineleloldabest_left_hand_spartan_fp
+SaveTagChanges
+Exit
+
+#
+# |View Model|
+#
+StringId Add offset_grenade_launcher
+EditTag ui\weapon_type_names.multilingual_unicode_string_list
+SetString english offset_grenade_launcher "Grenade Launcher"
+savetagchanges
+exit
+
+EditTag dw3\r3ach\objects\weapons\rifle\grenade_launcher\grenade_launcher.weapon
+SetField WeaponTypeName offset_grenade_launcher
+SaveTagChanges
+Exit
+
+#
+# |Add to Globals|
+#
+
+StringId Add grenade_launcher
+EditTag multiplayer\multiplayer_globals.multiplayer_globals
+AddBlockElements Universal[0].GameVariantWeapons
+SetField Universal[0].GameVariantWeapons[*].RandomChance 0.1
+SetField Universal[0].GameVariantWeapons[*].Weapon dw3\r3ach\objects\weapons\rifle\grenade_launcher\grenade_launcher.weapon
+SetField Universal[0].GameVariantWeapons[*].Name grenade_launcher
+savetagchanges
+Exit
+
+
+AddForgeItem "Grenade Launcher" 1 dw3\r3ach\objects\weapons\rifle\grenade_launcher\grenade_launcher.weapon
+
+
+
+#
+#ECHO ||||Needle Rifle|||
+#
+
+OpenCacheFile Workshopdir\3372578060\maps\070_waste.map
+SetPortingOption BitmapFormatOptimization False
+porttag dw3\r3ach\objects\weapons\rifle\needle_rifle\needle_rifle.weapon
+exit
+
+OpenCacheFile reachmaps\20_sword_slayer.map
+SetPortingOption HqNormalMapConversion True
+NameBlamTag objects\weapons\pistol\needler\bitmaps\needle_normal.bitmap dw3\r3ach\objects\weapons\pistol\needler\bitmaps\needle_normal
+NameBlamTag objects\weapons\rifle\needle_rifle\bitmaps\needle_rifle_normal.bitmap dw3\r3ach\objects\weapons\rifle\needle_rifle\bitmaps\needle_rifle_normal
+NameBlamTag objects\weapons\rifle\assault_rifle\bitmaps\gun_microbump.bitmap objects\weapons\rifle\battle_rifle\bitmaps\gun_microbump
+NameBlamTag objects\vehicles\covenant\banshee\bitmaps\banshee_detail_bump.bitmap objects\vehicles\banshee\bitmaps\banshee_detail_bump
+porttag replace dw3\r3ach\objects\weapons\pistol\needler\bitmaps\needle_normal.bitmap
+porttag replace dw3\r3ach\objects\weapons\rifle\needle_rifle\bitmaps\needle_rifle_normal.bitmap
+porttag replace objects\weapons\rifle\battle_rifle\bitmaps\gun_microbump.bitmap
+porttag replace objects\vehicles\banshee\bitmaps\banshee_detail_bump.bitmap
+exit
+
+# ------------------------------------
+# |           ANIMATION           |
+# ------------------------------------
+EditTag dw3\r3ach\objects\weapons\rifle\needle_rifle\animations\fp_spartan\fp_spartan.model_animation_graph
+AddAnimation workingdir\animations\spartan_fp\needlerifle
+SortModes
+
+SetField Animations[6].PlaybackFlags DisableWeaponAim1stPerson
+SetField Animations[15].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[16].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[24].PlaybackFlags DisableWeaponIk
+
+SetField Animations[13].Weight 0.6
+SetField Animations[13].AnimationData.NextAnimation 14
+SetField Animations[14].Weight 1
+SetField Animations[14].AnimationData.ParentAnimation 13
+SetField Animations[14].PlaybackFlags DisableWeaponAim1stPerson,ForceWeaponIkOn
+
+SetField Animations[5].AnimationData.FrameEvents[1].TypeED SecondaryKeyframe
+SetField Animations[5].AnimationData.FrameEvents[2].TypeED AllowInterruption
+
+SetField Animations[6].AnimationData.FrameEvents[1].TypeED SecondaryKeyframe
+SetField Animations[6].AnimationData.FrameEvents[2].TypeED AllowInterruption
+
+SetField Animations[15].AnimationData.FrameEvents[1].TypeED AllowInterruption
+
+SetField Animations[16].AnimationData.FrameEvents[1].TypeED AllowInterruption
+
+SetField Animations[17].AnimationData.FrameEvents[1].TypeED SecondaryKeyframe
+SetField Animations[17].AnimationData.FrameEvents[2].TypeED AllowInterruption
+
+SetField Animations[18].AnimationData.FrameEvents[1].TypeED SecondaryKeyframe
+SetField Animations[18].AnimationData.FrameEvents[2].TypeED AllowInterruption
+
+AddBlockElements Modes[0].WeaponClass[0].WeaponIk
+SetField Modes[0].WeaponClass[0].WeaponIk[0].Marker left_hand
+SetField Modes[0].WeaponClass[0].WeaponIk[0].AttachToMarker mineleloldabest_left_hand_spartan_fp
+SaveTagChanges
+Exit
+
+#
+# |View Model|
+#
+StringId Add offset_needle_rifle
+EditTag ui\weapon_type_names.multilingual_unicode_string_list
+SetString english offset_needle_rifle "Needle Rifle"
+savetagchanges
+exit
+
+EditTag dw3\r3ach\objects\weapons\rifle\needle_rifle\needle_rifle.weapon
+SetField WeaponTypeName offset_needle_rifle
+SaveTagChanges
+Exit
+
+#
+# |Add to Globals|
+#
+
+StringId Add needle_rifle
+EditTag multiplayer\multiplayer_globals.multiplayer_globals
+AddBlockElements Universal[0].GameVariantWeapons
+SetField Universal[0].GameVariantWeapons[*].RandomChance 0.1
+SetField Universal[0].GameVariantWeapons[*].Weapon dw3\r3ach\objects\weapons\rifle\needle_rifle\needle_rifle.weapon
+SetField Universal[0].GameVariantWeapons[*].Name needle_rifle
+savetagchanges
+Exit
+
+
+AddForgeItem "Needle Rifle" 1 dw3\r3ach\objects\weapons\rifle\needle_rifle\needle_rifle.weapon
+
+#
+#ECHO ||||Plasma Repeater|||
+#
+
+OpenCacheFile Workshopdir\3372578060\maps\070_waste.map
+SetPortingOption BitmapFormatOptimization False
+porttag dw3\r3ach\objects\weapons\rifle\plasma_repeater\plasma_repeater.weapon
+exit
+
+OpenCacheFile reachmaps\20_sword_slayer.map
+SetPortingOption HqNormalMapConversion True
+NameBlamTag objects\weapons\rifle\plasma_repeater\bitmaps\plasma_repeater_normal.bitmap dw3\r3ach\objects\weapons\rifle\plasma_repeater\bitmaps\plasma_repeater_normal
+NameBlamTag objects\weapons\rifle\assault_rifle\bitmaps\gun_microbump.bitmap objects\weapons\rifle\battle_rifle\bitmaps\gun_microbump
+NameBlamTag objects\vehicles\covenant\banshee\bitmaps\banshee_detail_bump.bitmap objects\vehicles\banshee\bitmaps\banshee_detail_bump
+porttag replace dw3\r3ach\objects\weapons\rifle\plasma_repeater\bitmaps\plasma_repeater_normal.bitmap
+porttag replace objects\weapons\rifle\battle_rifle\bitmaps\gun_microbump.bitmap
+porttag replace objects\vehicles\banshee\bitmaps\banshee_detail_bump.bitmap
+exit
+
+# ------------------------------------
+# |          ANIMATION         |
+# ------------------------------------
+EditTag dw3\r3ach\objects\weapons\rifle\plasma_repeater\animations\fp_spartan\fp_spartan.model_animation_graph
+AddAnimation workingdir\animations\spartan_fp\plasmarepeater
+SortModes
+
+SetField Animations[6].PlaybackFlags DisableWeaponAim1stPerson
+SetField Animations[6].AnimationData.ProductionFlags VerifySoundEvents
+SetField Animations[6].AnimationData.InternalFlags CompressionDisabled,ValidProductionChecksum
+SetField Animations[6].AnimationData.NodeListChecksum -954407044
+SetField Animations[6].AnimationData.ProductionChecksum -270031332
+AddBlockElements Animations[6].AnimationData.FrameEvents 3
+SetField Animations[6].AnimationData.FrameEvents[0].TypeED PrimaryKeyframe
+SetField Animations[6].AnimationData.FrameEvents[0].Frame 5
+SetField Animations[6].AnimationData.FrameEvents[1].TypeED SecondaryKeyframe
+SetField Animations[6].AnimationData.FrameEvents[1].Frame 30
+SetField Animations[6].AnimationData.FrameEvents[2].TypeED AllowInterruption
+SetField Animations[6].AnimationData.FrameEvents[2].Frame 35
+AddBlockElements Animations[6].AnimationData.SoundEvents
+
+SetField Animations[29].PlaybackFlags DisableWeaponIk
+
+SetField Animations[15].Weight 0.6
+SetField Animations[15].AnimationData.NextAnimation 16
+SetField Animations[16].Weight 1
+SetField Animations[16].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[16].AnimationData.ParentAnimation 15
+SetField Animations[16].AnimationData.ProductionFlags VerifySoundEvents
+SetField Animations[16].AnimationData.InternalFlags CompressionDisabled,ValidProductionChecksum
+SetField Animations[16].AnimationData.NodeListChecksum -954407044
+SetField Animations[16].AnimationData.ProductionChecksum 1771446578
+AddBlockElements Animations[16].AnimationData.SoundEvents 1
+SetField Animations[16].AnimationData.SoundEvents[0].Sound 7
+
+SetField Animations[7].AnimationData.FrameEvents[1].TypeED SecondaryKeyframe
+SetField Animations[7].AnimationData.FrameEvents[2].TypeED AllowInterruption
+
+SetField Animations[17].AnimationData.FrameEvents[1].TypeED SecondaryKeyframe
+SetField Animations[17].AnimationData.FrameEvents[2].TypeED AllowInterruption
+
+SetField Animations[18].AnimationData.FrameEvents[1].TypeED SecondaryKeyframe
+SetField Animations[18].AnimationData.FrameEvents[2].TypeED AllowInterruption
+
+AddBlockElements Modes[0].WeaponClass[0].WeaponIk
+SetField Modes[0].WeaponClass[0].WeaponIk[0].Marker left_hand
+SetField Modes[0].WeaponClass[0].WeaponIk[0].AttachToMarker mineleloldabest_left_hand_spartan_fp
+SaveTagChanges
+Exit
+
+#
+# |View Model|
+#
+StringId Add offset_plasma_repeater
+EditTag ui\weapon_type_names.multilingual_unicode_string_list
+SetString english offset_plasma_repeater "Plasma Repeater"
+savetagchanges
+exit
+
+EditTag dw3\r3ach\objects\weapons\rifle\plasma_repeater\plasma_repeater.weapon
+SetField WeaponTypeName offset_plasma_repeater
+SaveTagChanges
+Exit
+
+#
+# |Add to Globals|
+#
+
+StringId Add plasma_repeater
+EditTag multiplayer\multiplayer_globals.multiplayer_globals
+AddBlockElements Universal[0].GameVariantWeapons
+SetField Universal[0].GameVariantWeapons[*].RandomChance 0.1
+SetField Universal[0].GameVariantWeapons[*].Weapon dw3\r3ach\objects\weapons\rifle\plasma_repeater\plasma_repeater.weapon
+SetField Universal[0].GameVariantWeapons[*].Name plasma_repeater
+savetagchanges
+Exit
+
+
+AddForgeItem "Plasma Repeater" 1 dw3\r3ach\objects\weapons\rifle\plasma_repeater\plasma_repeater.weapon
+
+
+#
+#ECHO ||||Plasma Launcher|||
+#
+
+OpenCacheFile Workshopdir\3372578060\maps\070_waste.map
+SetPortingOption BitmapFormatOptimization False
+porttag dw3\r3ach\objects\weapons\support_high\plasma_launcher\plasma_launcher.weapon
+exit
+
+OpenCacheFile reachmaps\20_sword_slayer.map
+SetPortingOption HqNormalMapConversion True
+NameBlamTag objects\weapons\support_high\plasma_launcher\bitmaps\plasma_launcher_normal.bitmap dw3\r3ach\objects\weapons\support_high\plasma_launcher\bitmaps\plasma_launcher_normal
+NameBlamTag objects\weapons\rifle\assault_rifle\bitmaps\gun_microbump.bitmap objects\weapons\rifle\battle_rifle\bitmaps\gun_microbump
+NameBlamTag objects\vehicles\covenant\banshee\bitmaps\banshee_detail_bump.bitmap objects\vehicles\banshee\bitmaps\banshee_detail_bump
+porttag replace dw3\r3ach\objects\weapons\support_high\plasma_launcher\bitmaps\plasma_launcher_normal.bitmap
+porttag replace objects\weapons\rifle\battle_rifle\bitmaps\gun_microbump.bitmap
+porttag replace objects\vehicles\banshee\bitmaps\banshee_detail_bump.bitmap
+exit
+
+# ------------------------------------
+# |          ANIMATION         |
+# ------------------------------------
+EditTag dw3\r3ach\objects\weapons\support_high\plasma_launcher\animations\fp_spartan\fp_spartan.model_animation_graph
+AddAnimation workingdir\animations\spartan_fp\plasmalauncher
+SortModes
+
+SetField Animations[14].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[22].PlaybackFlags DisableWeaponIk
+
+SetField Animations[22].Weight 0.6
+SetField Animations[22].AnimationData.NextAnimation 23
+SetField Animations[23].Weight 1
+SetField Animations[23].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[23].AnimationData.ParentAnimation 22
+
+SetField Animations[13].AnimationData.FrameEvents[1].TypeED SecondaryKeyframe
+SetField Animations[13].AnimationData.FrameEvents[2].TypeED AllowInterruption
+
+SetField Animations[14].AnimationData.FrameEvents[1].TypeED SecondaryKeyframe
+SetField Animations[14].AnimationData.FrameEvents[2].TypeED AllowInterruption
+
+SetField Animations[24].AnimationData.FrameEvents[1].TypeED AllowInterruption
+
+SetField Animations[25].AnimationData.FrameEvents[1].TypeED AllowInterruption
+
+SetField Animations[26].AnimationData.FrameEvents[1].TypeED SecondaryKeyframe
+SetField Animations[26].AnimationData.FrameEvents[2].TypeED AllowInterruption
+
+SetField Animations[27].AnimationData.FrameEvents[1].TypeED SecondaryKeyframe
+SetField Animations[27].AnimationData.FrameEvents[2].TypeED AllowInterruption
+
+AddBlockElements Modes[0].WeaponClass[0].WeaponIk
+SetField Modes[0].WeaponClass[0].WeaponIk[0].Marker left_hand
+SetField Modes[0].WeaponClass[0].WeaponIk[0].AttachToMarker mineleloldabest_left_hand_spartan_fp
+SaveTagChanges
+Exit
+
+#
+# |View Model|
+#
+StringId Add offset_plasma_launcher
+EditTag ui\weapon_type_names.multilingual_unicode_string_list
+SetString english offset_plasma_launcher "Plasma Launcher"
+savetagchanges
+exit
+
+EditTag dw3\r3ach\objects\weapons\rifle\plasma_repeater\plasma_repeater.weapon
+SetField WeaponTypeName offset_plasma_launcher
+SaveTagChanges
+Exit
+
+#
+# |Add to Globals|
+#
+
+StringId Add plasma_launcher
+EditTag multiplayer\multiplayer_globals.multiplayer_globals
+AddBlockElements Universal[0].GameVariantWeapons
+SetField Universal[0].GameVariantWeapons[*].RandomChance 0.025
+SetField Universal[0].GameVariantWeapons[*].Weapon dw3\r3ach\objects\weapons\support_high\plasma_launcher\plasma_launcher.weapon
+SetField Universal[0].GameVariantWeapons[*].Name plasma_launcher
+savetagchanges
+Exit
+
+
+AddForgeItem "Plasma Launcher" 1 dw3\r3ach\objects\weapons\support_high\plasma_launcher\plasma_launcher.weapon
+
+#
+#ECHO ||||Reach Assault Rifle|||
+#
+
+OpenCacheFile Workshopdir\3372578060\maps\070_waste.map
+SetPortingOption BitmapFormatOptimization False
+porttag dw3\r3ach\objects\weapons\rifle\assault_rifle\assault_rifle.weapon
+exit
+
+OpenCacheFile reachmaps\20_sword_slayer.map
+SetPortingOption HqNormalMapConversion True
+NameBlamTag objects\weapons\rifle\assault_rifle\bitmaps\assault_rifle_normal.bitmap dw3\r3ach\objects\weapons\rifle\assault_rifle\bitmaps\assault_rifle_normal
+NameBlamTag objects\weapons\rifle\assault_rifle\bitmaps\gun_microbump.bitmap dw3\r3ach\objects\bitmaps\detail\gun_microbump
+porttag replace dw3\r3ach\objects\weapons\rifle\assault_rifle\bitmaps\assault_rifle_normal.bitmap
+porttag replace dw3\r3ach\objects\bitmaps\detail\gun_microbump.bitmap
+exit
+
+# ------------------------------------
+# |           ANIMATION          |
+# ------------------------------------
+EditTag dw3\r3ach\objects\weapons\rifle\assault_rifle\animations\fp_spartan\fp_spartan.model_animation_graph
+AddAnimation Keep workingdir\animations\spartan_fp\assaultrifle
+SortModes
+
+SetField Animations[14].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[15].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[23].PlaybackFlags DisableWeaponIk
+
+SetField Animations[12].Weight 0.6
+SetField Animations[12].AnimationData.NextAnimation 13
+SetField Animations[13].Weight 1
+SetField Animations[13].AnimationData.ParentAnimation 12
+SetField Animations[13].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+
+AddBlockElements Modes[0].WeaponClass[0].WeaponIk
+SetField Modes[0].WeaponClass[0].WeaponIk[0].Marker left_hand
+SetField Modes[0].WeaponClass[0].WeaponIk[0].AttachToMarker mineleloldabest_left_hand_spartan_fp
+SaveTagChanges
+Exit
+
+#
+# |View Model|
+#
+StringId Add offset_reach_assault_rifle
+EditTag ui\weapon_type_names.multilingual_unicode_string_list
+SetString english offset_reach_assault_rifle "Reach Assault Rifle"
+savetagchanges
+exit
+
+EditTag dw3\r3ach\objects\weapons\rifle\assault_rifle\assault_rifle.weapon
+SetField WeaponTypeName offset_reach_assault_rifle
+SaveTagChanges
+Exit
+
+#
+# |Add to Globals|
+#
+
+StringId Add reach_assault_rifle
+EditTag multiplayer\multiplayer_globals.multiplayer_globals
+AddBlockElements Universal[0].GameVariantWeapons
+SetField Universal[0].GameVariantWeapons[*].RandomChance 0.1
+SetField Universal[0].GameVariantWeapons[*].Weapon dw3\r3ach\objects\weapons\rifle\assault_rifle\assault_rifle.weapon
+SetField Universal[0].GameVariantWeapons[*].Name reach_assault_rifle
+savetagchanges
+Exit
+
+
+AddForgeItem "Reach Assault Rifle" 1 dw3\r3ach\objects\weapons\rifle\assault_rifle\assault_rifle.weapon
+
+
+#
+#ECHO ||||Reach DMR|||
+#
+
+OpenCacheFile Workshopdir\3372578060\maps\070_waste.map
+SetPortingOption BitmapFormatOptimization False
+porttag dw3\r3ach\objects\weapons\rifle\dmr\dmr.weapon
+exit
+
+OpenCacheFile reachmaps\20_sword_slayer.map
+SetPortingOption HqNormalMapConversion True
+NameBlamTag objects\weapons\rifle\dmr\bitmaps\dmr_normal.bitmap dw3\r3ach\objects\weapons\rifle\dmr\bitmaps\dmr_normal
+NameBlamTag objects\weapons\rifle\assault_rifle\bitmaps\gun_microbump.bitmap dw3\r3ach\objects\bitmaps\detail\gun_microbump
+porttag replace dw3\r3ach\objects\weapons\rifle\dmr\bitmaps\dmr_normal.bitmap
+porttag replace dw3\r3ach\objects\bitmaps\detail\gun_microbump.bitmap
+exit
+
+# ------------------------------------
+# |                ANIMATION               |
+# ------------------------------------
+EditTag dw3\r3ach\objects\weapons\rifle\dmr\animations\fp_spartan\fp_spartan.model_animation_graph
+AddAnimation workingdir\animations\spartan_fp\dmr
+SortModes
+
+SetField Animations[14].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[15].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[23].PlaybackFlags DisableWeaponIk
+
+SetField Animations[12].Weight 0.6
+SetField Animations[12].AnimationData.NextAnimation 13
+SetField Animations[13].Weight 1
+SetField Animations[13].AnimationData.ParentAnimation 12
+SetField Animations[13].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+
+AddBlockElements Modes[0].WeaponClass[0].WeaponIk
+SetField Modes[0].WeaponClass[0].WeaponIk[0].Marker left_hand
+SetField Modes[0].WeaponClass[0].WeaponIk[0].AttachToMarker mineleloldabest_left_hand_spartan_fp
+SaveTagChanges
+Exit
+
+#
+# |View Model|
+#
+StringId Add offset_reach_dmr
+EditTag ui\weapon_type_names.multilingual_unicode_string_list
+SetString english offset_reach_dmr "Reach DMR"
+savetagchanges
+exit
+
+EditTag dw3\r3ach\objects\weapons\rifle\dmr\dmr.weapon
+SetField WeaponTypeName offset_reach_dmr
+SaveTagChanges
+Exit
+
+#
+# |Add to Globals|
+#
+
+StringId Add reach_dmr
+EditTag multiplayer\multiplayer_globals.multiplayer_globals
+AddBlockElements Universal[0].GameVariantWeapons
+SetField Universal[0].GameVariantWeapons[*].RandomChance 0.1
+SetField Universal[0].GameVariantWeapons[*].Weapon dw3\r3ach\objects\weapons\rifle\dmr\dmr.weapon
+SetField Universal[0].GameVariantWeapons[*].Name reach_dmr
+savetagchanges
+Exit
+
+
+AddForgeItem "Reach DMR" 1 dw3\r3ach\objects\weapons\rifle\dmr\dmr.weapon
+
+
+#
+#ECHO ||||Reach magnum|||
+#
+
+OpenCacheFile Workshopdir\3372578060\maps\070_waste.map
+SetPortingOption BitmapFormatOptimization False
+porttag dw3\r3ach\objects\weapons\pistol\magnum\magnum.weapon
+exit
+
+OpenCacheFile reachmaps\20_sword_slayer.map
+SetPortingOption HqNormalMapConversion True
+NameBlamTag objects\weapons\pistol\magnum\bitmaps\magnum_zbump.bitmap dw3\r3ach\objects\weapons\pistol\magnum\bitmaps\magnum_zbump
+NameBlamTag objects\weapons\rifle\assault_rifle\bitmaps\gun_microbump.bitmap objects\weapons\rifle\battle_rifle\bitmaps\gun_microbump
+porttag replace dw3\r3ach\objects\weapons\pistol\magnum\bitmaps\magnum_zbump.bitmap
+porttag replace objects\weapons\rifle\battle_rifle\bitmaps\gun_microbump.bitmap
+exit
+
+# ------------------------------------
+# |              MAGNUM              |
+# ------------------------------------
+EditTag dw3\r3ach\objects\weapons\pistol\magnum\animations\fp_spartan\fp_spartan.model_animation_graph
+AddAnimation workingdir\animations\spartan_fp\magnum
+SortModes
+
+SetField Animations[6].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[7].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[11].PlaybackFlags DisableWeaponIk
+SetField Animations[14].PlaybackFlags ForceWeaponIkOn
+SetField Animations[16].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[17].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[24].PlaybackFlags DisableWeaponIk
+SetField Animations[25].PlaybackFlags DisableWeaponIk
+SetField Animations[26].PlaybackFlags DisableWeaponIk
+SetField Animations[27].PlaybackFlags DisableWeaponIk
+
+# SetField Animations[14].Weight 0.6
+# SetField Animations[14].AnimationData.NextAnimation 15
+# SetField Animations[15].Weight 1
+# SetField Animations[15].AnimationData.ParentAnimation 14
+# SetField Animations[15].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+
+AddBlockElements Modes[0].WeaponClass[0].WeaponIk
+SetField Modes[0].WeaponClass[0].WeaponIk[0].Marker left_hand
+SetField Modes[0].WeaponClass[0].WeaponIk[0].AttachToMarker mineleloldabest_left_hand_spartan_fp
+SaveTagChanges
+Exit
+
+#
+# |View Model|
+#
+StringId Add offset_reach_magnum
+EditTag ui\weapon_type_names.multilingual_unicode_string_list
+SetString english offset_reach_magnum "Reach Magnum"
+savetagchanges
+exit
+
+EditTag dw3\r3ach\objects\weapons\pistol\magnum\magnum.weapon
+SetField WeaponTypeName offset_reach_magnum
+SaveTagChanges
+Exit
+
+#
+# |Add to Globals|
+#
+
+StringId Add reach_magnum
+EditTag multiplayer\multiplayer_globals.multiplayer_globals
+AddBlockElements Universal[0].GameVariantWeapons
+SetField Universal[0].GameVariantWeapons[*].RandomChance 0.1
+SetField Universal[0].GameVariantWeapons[*].Weapon dw3\r3ach\objects\weapons\pistol\magnum\magnum.weapon
+SetField Universal[0].GameVariantWeapons[*].Name reach_magnum
+savetagchanges
+Exit
+
+
+AddForgeItem "Reach Magnum" 1 dw3\r3ach\objects\weapons\pistol\magnum\magnum.weapon
+
+
+#
+#ECHO ||||Reach shotgun|||
+#
+
+OpenCacheFile Workshopdir\3372578060\maps\070_waste.map
+SetPortingOption BitmapFormatOptimization False
+porttag dw3\r3ach\objects\weapons\rifle\shotgun\shotgun.weapon
+exit
+
+OpenCacheFile reachmaps\20_sword_slayer.map
+SetPortingOption HqNormalMapConversion True
+NameBlamTag objects\weapons\rifle\shotgun\bitmaps\shotgun_zbump.bitmap dw3\r3ach\objects\weapons\rifle\shotgun\bitmaps\shotgun_zbump
+NameBlamTag objects\weapons\rifle\assault_rifle\bitmaps\gun_microbump.bitmap dw3\r3ach\objects\bitmaps\detail\gun_microbump
+porttag replace dw3\r3ach\objects\weapons\rifle\shotgun\bitmaps\shotgun_zbump.bitmap
+porttag replace dw3\r3ach\objects\bitmaps\detail\gun_microbump.bitmap
+exit
+
+# ------------------------------------
+# |             ANIMATION              |
+# ------------------------------------
+EditTag dw3\r3ach\objects\weapons\rifle\shotgun\animations\fp_spartan\fp_spartan.model_animation_graph
+AddAnimation workingdir\animations\spartan_fp\shotgun
+SortModes
+
+SetField Animations[0].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[6].PlaybackFlags DisableInterpolationIn,DisableInterpolationOut,DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[15].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[16].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[24].PlaybackFlags DisableWeaponIk
+
+SetField Animations[13].Weight 0.6
+SetField Animations[13].AnimationData.NextAnimation 14
+SetField Animations[14].Weight 1
+SetField Animations[14].AnimationData.ParentAnimation 13
+SetField Animations[14].PlaybackFlags DisableWeaponAim1stPerson,ForceWeaponIkOn
+
+SetField Animations[6].AnimationData.ProductionFlags VerifySoundEvents
+SetField Animations[6].AnimationData.InternalFlags CompressionDisabled,ValidProductionChecksum
+SetField Animations[6].AnimationData.NodeListChecksum -461722627
+SetField Animations[6].AnimationData.ProductionChecksum -1650910335
+
+AddBlockElements Animations[6].AnimationData.FrameEvents 3
+SetField Animations[6].AnimationData.FrameEvents[0].TypeED PrimaryKeyframe
+SetField Animations[6].AnimationData.FrameEvents[0].Frame 5
+SetField Animations[6].AnimationData.FrameEvents[1].TypeED PrimaryKeyframe
+SetField Animations[6].AnimationData.FrameEvents[1].Frame 30
+SetField Animations[6].AnimationData.FrameEvents[2].TypeED PrimaryKeyframe
+SetField Animations[6].AnimationData.FrameEvents[2].Frame 35
+
+AddBlockElements Animations[6].AnimationData.SoundEvents 1
+SetField Animations[6].AnimationData.SoundEvents[0].Sound 4
+
+AddBlockElements Modes[0].WeaponClass[0].WeaponIk
+SetField Modes[0].WeaponClass[0].WeaponIk[0].Marker left_hand
+SetField Modes[0].WeaponClass[0].WeaponIk[0].AttachToMarker mineleloldabest_left_hand_spartan_fp
+SaveTagChanges
+Exit
+
+#
+# |View Model|
+#
+StringId Add offset_reach_shotgun
+EditTag ui\weapon_type_names.multilingual_unicode_string_list
+SetString english offset_reach_shotgun "Reach Shotgun"
+savetagchanges
+exit
+
+EditTag dw3\r3ach\objects\weapons\rifle\shotgun\shotgun.weapon
+SetField WeaponTypeName offset_reach_shotgun
+SaveTagChanges
+Exit
+
+#
+# |Add to Globals|
+#
+
+StringId Add reach_shotgun
+EditTag multiplayer\multiplayer_globals.multiplayer_globals
+AddBlockElements Universal[0].GameVariantWeapons
+SetField Universal[0].GameVariantWeapons[*].RandomChance 0.1
+SetField Universal[0].GameVariantWeapons[*].Weapon dw3\r3ach\objects\weapons\rifle\shotgun\shotgun.weapon
+SetField Universal[0].GameVariantWeapons[*].Name reach_shotgun
+savetagchanges
+Exit
+
+
+AddForgeItem "Reach shotgun" 1 dw3\r3ach\objects\weapons\rifle\shotgun\shotgun.weapon
+
+
+#
+#ECHO ||||Reach Sniper|||
+#
+
+OpenCacheFile Workshopdir\3372578060\maps\070_waste.map
+SetPortingOption BitmapFormatOptimization False
+porttag dw3\r3ach\objects\weapons\rifle\sniper_rifle\sniper_rifle.weapon
+exit
+
+OpenCacheFile reachmaps\20_sword_slayer.map
+SetPortingOption HqNormalMapConversion True
+NameBlamTag objects\weapons\rifle\sniper_rifle\bitmaps\sniper_rifle_normal.bitmap dw3\r3ach\objects\weapons\rifle\sniper_rifle\bitmaps\sniper_rifle_normal
+NameBlamTag objects\weapons\rifle\assault_rifle\bitmaps\gun_microbump.bitmap dw3\r3ach\objects\bitmaps\detail\gun_microbump
+NameBlamTag objects\weapons\rifle\assault_rifle\bitmaps\rubber_microbump.bitmap objects\weapons\rifle\battle_rifle\bitmaps\rubber_microbump
+porttag replace dw3\r3ach\objects\weapons\rifle\sniper_rifle\bitmaps\sniper_rifle_normal.bitmap
+porttag replace objects\weapons\rifle\battle_rifle\bitmaps\rubber_microbump.bitmap
+exit
+
+# ------------------------------------
+# |           ANIMATION           |
+# ------------------------------------
+EditTag dw3\r3ach\objects\weapons\rifle\sniper_rifle\animations\fp_spartan\fp_spartan.model_animation_graph
+AddAnimation workingdir\animations\spartan_fp\sniperrifle
+SortModes
+
+SetField Animations[4].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[8].PlaybackFlags DisableWeaponIk
+SetField Animations[11].PlaybackFlags DisableWeaponIk
+SetField Animations[13].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[14].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+
+SetField Animations[11].Weight 0.6
+SetField Animations[11].AnimationData.NextAnimation 12
+SetField Animations[12].Weight 1
+SetField Animations[12].AnimationData.ParentAnimation 11
+SetField Animations[12].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+
+AddBlockElements Modes[0].WeaponClass[0].WeaponIk
+SetField Modes[0].WeaponClass[0].WeaponIk[0].Marker left_hand
+SetField Modes[0].WeaponClass[0].WeaponIk[0].AttachToMarker mineleloldabest_left_hand_spartan_fp
+SaveTagChanges
+Exit
+
+#
+# |View Model|
+#
+StringId Add offset_reach_sniper
+EditTag ui\weapon_type_names.multilingual_unicode_string_list
+SetString english offset_reach_sniper "Reach Sniper"
+savetagchanges
+exit
+
+EditTag dw3\r3ach\objects\weapons\rifle\sniper_rifle\sniper_rifle.weapon
+SetField WeaponTypeName offset_reach_sniper
+SaveTagChanges
+Exit
+
+#
+# |Add to Globals|
+#
+
+StringId Add reach_sniper
+EditTag multiplayer\multiplayer_globals.multiplayer_globals
+AddBlockElements Universal[0].GameVariantWeapons
+SetField Universal[0].GameVariantWeapons[*].RandomChance 0.1
+SetField Universal[0].GameVariantWeapons[*].Weapon dw3\r3ach\objects\weapons\rifle\sniper_rifle\sniper_rifle.weapon
+SetField Universal[0].GameVariantWeapons[*].Name reach_sniper
+savetagchanges
+Exit
+
+
+AddForgeItem "Reach Sniper" 1 dw3\r3ach\objects\weapons\rifle\sniper_rifle\sniper_rifle.weapon
+
+
+#
+#ECHO ||||Reach sword|||
+#
+
+OpenCacheFile Workshopdir\3372578060\maps\070_waste.map
+SetPortingOption BitmapFormatOptimization False
+porttag dw3\r3ach\objects\weapons\melee\energy_sword\energy_sword.weapon
+exit
+
+OpenCacheFile reachmaps\20_sword_slayer.map
+SetPortingOption HqNormalMapConversion True
+NameBlamTag objects\weapons\melee\energy_sword\bitmaps\energyhandle_normal.bitmap dw3\r3ach\objects\weapons\melee\energy_sword\bitmaps\energyhandle_normal
+NameBlamTag objects\weapons\rifle\assault_rifle\bitmaps\gun_microbump.bitmap dw3\r3ach\objects\bitmaps\detail\gun_microbump
+porttag replace dw3\r3ach\objects\weapons\melee\energy_sword\bitmaps\energyhandle_normal.bitmap
+porttag replace dw3\r3ach\objects\bitmaps\detail\gun_microbump.bitmap
+exit
+
+
+#
+# |View Model|
+#
+StringId Add offset_reach_sword
+EditTag ui\weapon_type_names.multilingual_unicode_string_list
+SetString english offset_reach_sword "Reach Sword"
+savetagchanges
+exit
+
+EditTag dw3\r3ach\objects\weapons\melee\energy_sword\energy_sword.weapon
+SetField WeaponTypeName offset_reach_sword
+SaveTagChanges
+Exit
+
+#
+# |Add to Globals|
+#
+
+StringId Add reach_sword
+EditTag multiplayer\multiplayer_globals.multiplayer_globals
+AddBlockElements Universal[0].GameVariantWeapons
+SetField Universal[0].GameVariantWeapons[*].RandomChance 0.1
+SetField Universal[0].GameVariantWeapons[*].Weapon dw3\r3ach\objects\weapons\melee\energy_sword\energy_sword.weapon
+SetField Universal[0].GameVariantWeapons[*].Name reach_sword
+savetagchanges
+Exit
+
+
+AddForgeItem "Reach Sword" 1 dw3\r3ach\objects\weapons\melee\energy_sword\energy_sword.weapon
+
+
+ECHO COMBAT EVOLVED WEAPONS START
+
+
+#
+#ECHO||CE Assault Rifle|||
+#
+
+OpenCacheFile Workshopdir\2962955878\maps\bloodgulch.map
+porttag custom\weapons\hce\tgof_hce_assault_rifle\hce_ar.weapon
+exit
+
+EditTag custom\weapons\hce\tgof_hce_assault_rifle\shaders\gun.shader
+SetField ShaderProperties[0].TextureConstants[3].Bitmap objects\weapons\rifle\battle_rifle\bitmaps\gun_microbump_dxt5.bitmap
+savetagchanges
+exit
+
+EditTag custom\ui\chud\hce_ar.chud_definition
+SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Scale 2 2
+SetField HudWidgets[1].PlacementData[0].Offset 1855 -18.75
+savetagchanges
+exit
+
+#
+# |Animations|
+#
+
+EditTag custom\weapons\hce\tgof_hce_assault_rifle\fp\fp.model_animation_graph
+SetInheritance any:any:any:sprint_enter objects\characters\masterchief\fp\weapons\rifle\fp_assault_rifle\fp_assault_rifle.model_animation_graph PlayerNodes
+SetInheritance any:any:any:sprint_loop objects\characters\masterchief\fp\weapons\rifle\fp_assault_rifle\fp_assault_rifle.model_animation_graph PlayerNodes
+SetInheritance any:any:any:sprint_loop_airborne objects\characters\masterchief\fp\weapons\rifle\fp_assault_rifle\fp_assault_rifle.model_animation_graph PlayerNodes
+setfield InheritanceList[0].RootZOffset 1.2
+SaveTagChanges
+Exit
+
+#
+# |View Model|
+#
+StringId Add offset_ce_assault_rifle
+EditTag ui\weapon_type_names.multilingual_unicode_string_list
+SetString english offset_ce_assault_rifle "CE Assault Rifle"
+savetagchanges
+exit
+
+EditTag custom\weapons\hce\tgof_hce_assault_rifle\hce_ar.weapon
+SetField WeaponTypeName offset_ce_assault_rifle
+SaveTagChanges
+Exit
+
+#
+# |Add to Globals|
+#
+
+StringId Add ce_assault_rifle
+EditTag multiplayer\multiplayer_globals.multiplayer_globals
+AddBlockElements Universal[0].GameVariantWeapons
+SetField Universal[0].GameVariantWeapons[*].RandomChance 0.1
+SetField Universal[0].GameVariantWeapons[*].Weapon custom\weapons\hce\tgof_hce_assault_rifle\hce_ar.weapon
+SetField Universal[0].GameVariantWeapons[*].Name ce_assault_rifle
+savetagchanges
+Exit
+
+AddForgeItem "CE Assault Rifle" 1 custom\weapons\hce\tgof_hce_assault_rifle\hce_ar.weapon
+
+
+#
+#ECHO||CE Magnum|||
+#
+
+OpenCacheFile Workshopdir\2962955878\maps\bloodgulch.map
+porttag custom\weapons\hce\tgof_hce_magnum\hce_magnum.weapon
+exit
+
+EditTag custom\weapons\hce\tgof_hce_magnum\shaders\silver.shader
+SetField ShaderProperties[0].TextureConstants[3].Bitmap objects\weapons\rifle\battle_rifle\bitmaps\gun_microbump_dxt5.bitmap
+SetArgument environment_map_specular_contribution 1
+savetagchanges
+exit
+
+EditTag custom\ui\chud\hce_magnum.chud_definition
+SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Scale 1.5 1.5
+SetField HudWidgets[1].PlacementData[0].Offset 1900 -18.75
+SetField HudWidgets[2].TextWidgets[0].PlacementData[0].Scale 2 2
+savetagchanges
+exit
+
+EditTag custom\weapons\hce\tgof_hce_magnum\hce_magnum.weapon
+SetField CenteredFirstPersonWeaponOffset 0.05 0 0.005
+SetField FirstPersonWeaponOffset 0.05 0 0.015
+savetagchanges
+exit
+
+#
+# |Animations|
+#
+
+EditTag custom\weapons\hce\tgof_hce_magnum\fp\fp.model_animation_graph
+SetInheritance any:any:any:sprint_enter objects\characters\masterchief\fp\weapons\pistol\fp_magnum\fp_magnum.model_animation_graph PlayerNodes
+SetInheritance any:any:any:sprint_loop objects\characters\masterchief\fp\weapons\pistol\fp_magnum\fp_magnum.model_animation_graph PlayerNodes
+SetInheritance any:any:any:sprint_loop_airborne objects\characters\masterchief\fp\weapons\pistol\fp_magnum\fp_magnum.model_animation_graph PlayerNodes
+setfield InheritanceList[0].RootZOffset 1.2
+SaveTagChanges
+Exit
+
+#
+# |View Model|
+#
+StringId Add offset_ce_magnum
+EditTag ui\weapon_type_names.multilingual_unicode_string_list
+SetString english offset_ce_magnum "CE Magnum"
+savetagchanges
+exit
+
+EditTag custom\weapons\hce\tgof_hce_magnum\hce_magnum.weapon
+SetField WeaponTypeName offset_ce_magnum
+SaveTagChanges
+Exit
+
+#
+# |Add to Globals|
+#
+
+StringId Add ce_magnum
+EditTag multiplayer\multiplayer_globals.multiplayer_globals
+AddBlockElements Universal[0].GameVariantWeapons
+SetField Universal[0].GameVariantWeapons[*].RandomChance 0.1
+SetField Universal[0].GameVariantWeapons[*].Weapon custom\weapons\hce\tgof_hce_magnum\hce_magnum.weapon
+SetField Universal[0].GameVariantWeapons[*].Name ce_magnum
+savetagchanges
+Exit
+
+AddForgeItem "CE Magnum" 1 custom\weapons\hce\tgof_hce_magnum\hce_magnum.weapon
+
+
+#
+#ECHO||CE Shotgun|||
+#
+
+OpenCacheFile Workshopdir\2962955878\maps\bloodgulch.map
+porttag custom\weapons\hce\hce_shotty\hce_shotgun.weapon
+exit
+
+EditTag custom\weapons\hce\tgof_shotgun\fp\shaders\shotgun_gun.shader
+SetField ShaderProperties[0].TextureConstants[3].Bitmap objects\weapons\rifle\battle_rifle\bitmaps\gun_microbump_dxt5.bitmap
+savetagchanges
+exit
+
+EditTag custom\ui\chud\hce_shotgun.chud_definition
+SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Scale 1.5 1.5
+SetField HudWidgets[1].PlacementData[0].Offset 1900 -18.75
+savetagchanges
+exit
+
+#
+# |Animations|
+#
+
+EditTag custom\weapons\hce\tgof_shotgun\fp\fp.model_animation_graph
+SetInheritance any:any:any:sprint_enter objects\characters\masterchief\fp\weapons\rifle\fp_shotgun\fp_shotgun.model_animation_graph PlayerNodes
+SetInheritance any:any:any:sprint_loop objects\characters\masterchief\fp\weapons\rifle\fp_shotgun\fp_shotgun.model_animation_graph PlayerNodes
+SetInheritance any:any:any:sprint_loop_airborne objects\characters\masterchief\fp\weapons\rifle\fp_shotgun\fp_shotgun.model_animation_graph PlayerNodes
+SaveTagChanges
+Exit
+
+#
+# |View Model|
+#
+StringId Add offset_ce_shotgun
+EditTag ui\weapon_type_names.multilingual_unicode_string_list
+SetString english offset_ce_shotgun "CE shotgun"
+savetagchanges
+exit
+
+EditTag custom\weapons\hce\hce_shotty\hce_shotgun.weapon
+SetField WeaponTypeName offset_ce_shotgun
+SaveTagChanges
+Exit
+
+#
+# |Add to Globals|
+#
+
+StringId Add ce_shotgun
+EditTag multiplayer\multiplayer_globals.multiplayer_globals
+AddBlockElements Universal[0].GameVariantWeapons
+SetField Universal[0].GameVariantWeapons[*].RandomChance 0.1
+SetField Universal[0].GameVariantWeapons[*].Weapon custom\weapons\hce\hce_shotty\hce_shotgun.weapon
+SetField Universal[0].GameVariantWeapons[*].Name ce_shotgun
+savetagchanges
+Exit
+
+AddForgeItem "CE Shotgun" 1 custom\weapons\hce\hce_shotty\hce_shotgun.weapon
+
+
+#
+#ECHO||CE Sniper|||
+#
+
+OpenCacheFile Workshopdir\2962955878\maps\bloodgulch.map
+porttag custom\weapons\hce\hce_sniper\hce_sniper.weapon
+exit
+
+EditTag custom\weapons\hce\tgof_hce_sniper\fp\shaders\sniper_rifle_metal.shader
+SetField ShaderProperties[0].TextureConstants[3].Bitmap objects\weapons\rifle\battle_rifle\bitmaps\gun_microbump_dxt5.bitmap
+savetagchanges
+exit
+
+EditTag custom\ui\chud\hce_sniper.chud_definition
+SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Scale 1.5 1.5
+SetField HudWidgets[1].TextWidgets[0].PlacementData[0].Scale 2 2
+SetField HudWidgets[1].TextWidgets[1].PlacementData[0].Scale 2 2
+SetField HudWidgets[2].PlacementData[0].Offset 1955 -18.75
+savetagchanges
+exit
+
+#
+# |Animations|
+#
+
+EditTag custom\weapons\hce\tgof_hce_sniper\fp\fp.model_animation_graph
+SetInheritance any:any:any:sprint_enter objects\characters\masterchief\fp\weapons\rifle\fp_sniper_rifle\fp_sniper_rifle.model_animation_graph PlayerNodes
+SetInheritance any:any:any:sprint_loop objects\characters\masterchief\fp\weapons\rifle\fp_sniper_rifle\fp_sniper_rifle.model_animation_graph PlayerNodes
+SetInheritance any:any:any:sprint_loop_airborne objects\characters\masterchief\fp\weapons\rifle\fp_sniper_rifle\fp_sniper_rifle.model_animation_graph PlayerNodes
+setfield InheritanceList[0].RootZOffset 1.5
+SaveTagChanges
+Exit
+
+#
+# |View Model|
+#
+StringId Add offset_ce_sniper
+EditTag ui\weapon_type_names.multilingual_unicode_string_list
+SetString english offset_ce_sniper "CE sniper"
+savetagchanges
+exit
+
+EditTag custom\weapons\hce\hce_sniper\hce_sniper.weapon
+SetField WeaponTypeName offset_ce_sniper
+SaveTagChanges
+Exit
+
+#
+# |Add to Globals|
+#
+
+StringId Add ce_sniper
+EditTag multiplayer\multiplayer_globals.multiplayer_globals
+AddBlockElements Universal[0].GameVariantWeapons
+SetField Universal[0].GameVariantWeapons[*].RandomChance 0.1
+SetField Universal[0].GameVariantWeapons[*].Weapon custom\weapons\hce\hce_sniper\hce_sniper.weapon
+SetField Universal[0].GameVariantWeapons[*].Name ce_sniper
+savetagchanges
+Exit
+
+AddForgeItem "CE Sniper" 1 custom\weapons\hce\hce_sniper\hce_sniper.weapon
+
+
+
+
+
+
+
+
+
+
+
+
+ECHO HALO 2 WEAPONS START
+
+
+
+
+#
+#ECHO||H2 Battle Rifle|||
+#
+
+OpenCacheFile Workshopdir\2962955878\maps\bloodgulch.map
+porttag custom\weapons\other\tgof_h2_battle_rifle\battle_rifle.weapon
+exit
+
+EditTag custom\weapons\other\tgof_h2_battle_rifle\shaders\battle_rifle_metal.shader
+SetField ShaderProperties[0].TextureConstants[3].Bitmap objects\weapons\rifle\battle_rifle\bitmaps\gun_microbump_dxt5.bitmap
+savetagchanges
+exit
+
+EditTag custom\ui\chud\hce_sniper.chud_definition
+SetField HudWidgets[0].BitmapWidgets[0].PlacementData[0].Scale 1.5 1.5
+SetField HudWidgets[1].TextWidgets[0].PlacementData[0].Scale 2 2
+SetField HudWidgets[1].TextWidgets[1].PlacementData[0].Scale 2 2
+SetField HudWidgets[2].PlacementData[0].Offset 1955 -18.75
+savetagchanges
+exit
+
+#
+# |Animations|
+#
+
+EditTag custom\weapons\other\tgof_h2_battle_rifle\fp\fp.model_animation_graph
+SetInheritance any:any:any:sprint_enter objects\characters\masterchief\fp\weapons\rifle\fp_battle_rifle\fp_battle_rifle.model_animation_graph PlayerNodes
+SetInheritance any:any:any:sprint_loop objects\characters\masterchief\fp\weapons\rifle\fp_battle_rifle\fp_battle_rifle.model_animation_graph PlayerNodes
+SetInheritance any:any:any:sprint_loop_airborne objects\characters\masterchief\fp\weapons\rifle\fp_battle_rifle\fp_battle_rifle.model_animation_graph PlayerNodes
+setfield InheritanceList[0].RootZOffset 1.2
+SaveTagChanges
+Exit
+
+#
+# |View Model|
+#
+StringId Add offset_h2_battle_rifle
+EditTag ui\weapon_type_names.multilingual_unicode_string_list
+SetString english offset_h2_battle_rifle "H2 Battle Rifle"
+savetagchanges
+exit
+
+EditTag custom\weapons\other\tgof_h2_battle_rifle\battle_rifle.weapon
+SetField WeaponTypeName offset_h2_battle_rifle
+SaveTagChanges
+Exit
+
+#
+# |Add to Globals|
+#
+
+StringId Add h2_battle_rifle
+EditTag multiplayer\multiplayer_globals.multiplayer_globals
+AddBlockElements Universal[0].GameVariantWeapons
+SetField Universal[0].GameVariantWeapons[*].RandomChance 0.1
+SetField Universal[0].GameVariantWeapons[*].Weapon custom\weapons\other\tgof_h2_battle_rifle\battle_rifle.weapon
+SetField Universal[0].GameVariantWeapons[*].Name h2_battle_rifle
+savetagchanges
+Exit
+
+AddForgeItem "H2 Battle Rifle" 1 custom\weapons\other\tgof_h2_battle_rifle\battle_rifle.weapon
+
+
+

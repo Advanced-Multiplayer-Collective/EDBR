@@ -52,7 +52,7 @@ AddBlockElements Materials 1
 SetField Materials[0].Name default
 SetField Materials[0].PhantomType -1
 setfield Materials[0].Name default
-setfield Materials[0].MaterialName null
+setfield Materials[0].MaterialName NULL
 setfield Materials[0].RuntimeCollisionGroup 0
 
 AddBlockElements Boxes 1

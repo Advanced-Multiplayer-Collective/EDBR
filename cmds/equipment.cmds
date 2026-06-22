@@ -1,0 +1,49 @@
+
+echo Flammer
+
+DuplicateTag objects\equipment\jammer\fx\jammer.effect objects\equipment\flammer\flammer.effect
+EditTag objects\equipment\flammer\flammer.effect
+RemoveBlockElements Events 0 1
+SetField Events[0].DelayBounds 0 0
+SetField Events[0].DurationBounds 0.0033 0.0033
+AddBlockElements Events
+SetField Events[*].Name delay
+SetField Events[*].DurationBounds 0.1 0.1
+RemoveBlockElements Events[0].Parts 2 *
+SetField Events[0].Parts[0].RuntimeBaseGroupTag obje
+SetField Events[0].Parts[0].Type objects\weapons\turret\flamethrower\projectiles\flamethrower_stream.projectile
+SetField Events[0].Parts[1].PrimaryLocation 2
+SetField Events[0].Parts[1].RuntimeBaseGroupTag obje
+SetField Events[0].Parts[1].Type objects\weapons\turret\flamethrower\projectiles\flamethrower_stream.projectile
+SetField Events[0].Parts[1].PrimaryLocation 4
+SaveTagChanges
+Exit
+
+DuplicateTag objects\equipment\jammer\jammer.equipment objects\equipment\flammer\flammer
+EditTag objects\equipment\flammer\flammer.equipment
+AddBlockElements Functions
+SetField Functions[*].ImportName age
+SetField Functions[*].ExportName delay
+SetField Functions[*].MinimumValue 0.25
+SetField Functions[*].DefaultFunction.Data 08340000000000000000803F000000000000000048E1FA3E0000003F1400000001000000040000CDFFFF7F7F0000803F00000000
+RemoveBlockElements Attachments 0 1
+SetField Attachments[0].Type objects\equipment\flammer\flammer.effect
+SetField Attachments[0].PrimaryScale delay
+SaveTagChanges
+Exit
+
+DuplicateTag objects\equipment\jammer_equipment\jammer_equipment.equipment objects\equipment\flammer_equipment\flammer_equipment
+EditTag objects\equipment\flammer_equipment\flammer_equipment.equipment
+SetField Spawner[0].SpawnedObject objects\equipment\flammer\flammer.equipment
+SaveTagChanges
+Exit
+
+EditTag objects\equipment\jammer\jammer.model
+SetField NewDamageInfo[0].MaximumVitality 200
+SaveTagChanges
+Exit
+
+
+AddForgeItem "FLAMMER" "CLASSIC" objects\equipment\flammer_equipment\flammer_equipment.equipment
+
+
