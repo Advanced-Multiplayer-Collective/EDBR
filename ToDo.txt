@@ -32,11 +32,19 @@ remove headshots from sniper
 -Added Automag
 -Added "Flammer" Equipment
 -Fixed Health Pack effect
--Increased Weapon starting ammo from 1 to 2 Magazines
 -Added more ladders to Streets Map
 -Reduced bloom on Streets
--Reduced spawn chance of all Weapon Variants, Snipers, Sword/hammmers and rockets
--Disabled HeadShots with Sniper rifles (Still a two shot)
+-Added Armor Lock
+-Added Grapple Hook
+-Added Mystery Crates
+
+
+
+
+
+
+
+
 
 
 

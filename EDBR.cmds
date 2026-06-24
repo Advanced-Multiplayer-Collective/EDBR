@@ -289,7 +289,7 @@ echo ==Extra Weapons==
 
 RunCommands "workingdir\cmds\weapons.cmds"
 RunCommands "workingdir\cmds\equipment.cmds"
-
+RunCommands "workingdir\cmds\mysterycrates.cmds"
 
 AddModFiles "workingdir\assets"
 

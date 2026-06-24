@@ -43,7 +43,50 @@ SetField NewDamageInfo[0].MaximumVitality 200
 SaveTagChanges
 Exit
 
+AddForgeItem "FLAMMER" "EQUIPMENT" objects\equipment\flammer_equipment\flammer_equipment.equipment
 
-AddForgeItem "FLAMMER" "CLASSIC" objects\equipment\flammer_equipment\flammer_equipment.equipment
+echo Armor Lock
+
+opencachefile "reachmaps\20_sword_slayer.map"
+porttag objects\equipment\armor_lockup\armor_lockup.equipment
+porttag globals\collision_damage\armor_lock.collision_damage
+exit
+
+duplicatetag objects\equipment\invincibility_equipment\fx\running.effect
+nametag * objects\equipment\armor_lock_new\fx\running
+
+edittag objects\equipment\armor_lock_new\fx\running.effect
+SetField Events[0].DurationBounds 5 5
+SetField Events[0].Parts[0].Type null
+savetagchanges
+exit
+
+edittag objects\equipment\armor_lockup\armor_lockup.equipment
+SetField EquipmentFlags ThirdPersonCameraAlways,HidesWeaponOnActivation,CannotActivateWhileAirborne
+addblockelements ReactiveArmor
+setfield ReactiveArmor[0].EffectDuration 5
+SetField ReactiveArmor[0].MeleeDamageReflected 0
+SetField ReactiveArmor[0].OtherDamageReflected 0
+setfield ReactiveArmor[0].ActivationEffect objects\equipment\armor_lockup\fx\active_rumble.effect
+SetField MeleeImpactSound sound\weapons\equipment\tripmine\tripmine_drop.sound
+SetField Invincibility[0].InvincibilityMaterialType 178
+SetField RunningEffect objects\equipment\armor_lock_new\fx\running.effect
+AddBlockElements TankMode
+SetField TankMode[0].TankModeMaterial energy_shield_invincible
+SetField TankMode[0].TimeTankModeIsGrantedFor 5
+SetField TankMode[0].MeleeDamageBoost 100
+AddBlockElements ArmorLock
+SetField ArmorLock[0].OverrideCollisionDamage globals\collision_damage\armor_lock.collision_damage
+savetagchanges
+exit
+
+AddForgeItem "Armor Lock" "EQUIPMENT" objects\equipment\armor_lockup\armor_lockup.equipment
 
 
+Echo Grapple Hook
+
+opencachefile "Workshopdir\3748659423\maps\blam_mountain_halluci.map"
+porttag halluci\objects\utility\grapplinghook\grapplinghook.weapon
+exit
+
+AddForgeItem "Grapple Hook" "EQUIPMENT" halluci\objects\utility\grapplinghook\grapplinghook.weapon

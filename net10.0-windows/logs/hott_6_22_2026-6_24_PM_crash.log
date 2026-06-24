@@ -1,0 +1,157 @@
+TagTool [1.5.9666.17506 (Built 6/19/2026 9:44:10 AM UTC)]
+
+Please report any bugs and/or feature requests:
+https://github.com/MtnDewIt/TagTool-NET-Test/issues
+
+Enter the path to a Halo cache file (.map/.dat):
+> 
+
+Enter the path to a Halo cache file (.map/.dat):
+> D:\eldewrito\eldewrito 0.7\ElDewrito\maps
+
+Enter "help" to list available commands. Enter "quit" to quit.
+
+tags> 
+
+tags> # echo ==Set Variables...==
+
+tags> SetVariable workingdir "C:\Users\Matthew\Documents\GitHub\EDBR"
+Variable "workingdir" set to "C:\Users\Matthew\Documents\GitHub\EDBR".
+
+tags> SetVariable modsfolder "D:\eldewrito\eldewrito 0.7\ElDewrito\mods"
+Variable "modsfolder" set to "D:\eldewrito\eldewrito 0.7\ElDewrito\mods".
+
+tags> SetVariable odstmaps "E:\Halo Resources\Halo3odst"
+Variable "odstmaps" set to "E:\Halo Resources\Halo3odst".
+
+tags> SetVariable reachmaps "E:\Halo Resources\HaloReach"
+Variable "reachmaps" set to "E:\Halo Resources\HaloReach".
+
+tags> SetVariable h3maps "E:\Halo Resources\Halo3"
+Variable "h3maps" set to "E:\Halo Resources\Halo3".
+
+tags> SetVariable Workshopdir "D:\Games\steamapps\workshop\content\976730"
+Variable "Workshopdir" set to "D:\Games\steamapps\workshop\content\976730".
+
+tags> openmodpackage edbr
+Initializing cache...
+Done!
+
+tags\EDBR.pak> 
+
+tags\EDBR.pak> opencachefile "Workshopdir\3748659423\maps\blam_mountain_halluci.map"
+Loading cache...done.
+
+tags\EDBR.pak\blam_mountain_halluci.map\tags> porttag halluci\objects\brute_crate_rare\brute_crate_rare.crate
+[INFO]: Using Dxt1 instead of A8R8G8B8 for bitmap 'dw3\r3ach\objects\weapons\rifle\spike_rifle\bitmaps\spike_rifle_illum'
+[INFO]: Using Dxt5 instead of A8R8G8B8 for bitmap 'dw3\r3ach\objects\weapons\rifle\spike_rifle\bitmaps\spike_rifle_diffuse'
+['rmsh', 0x8909] halluci\objects\brute_crate\shaders\spike_rifle_metal_heat.shader
+['rmsh', 0x890D] halluci\objects\brute_crate\shaders\cluster.shader
+['bitm', 0x890E] objects\equipment\bitmaps\jammer_dif.bitmap
+['rmsh', 0x8910] halluci\objects\brute_crate_rare\shaders\tripmine_danger.shader
+['rmsh', 0x8911] halluci\objects\brute_crate\shaders\netting.shader
+['mode', 0x8908] halluci\objects\brute_crate_rare\brute_crate.render_model
+['coll', 0x8912] halluci\objects\brute_crate\brute_crate.collision_model
+['phmo', 0x8913] halluci\objects\brute_crate\brute_crate.physics_model
+['rmsh', 0x8918] halluci\objects\brute_crate_lid\shaders\cluster.shader
+['rmsh', 0x8919] halluci\objects\brute_crate_lid\shaders\spike_rifle_metal_heat.shader
+['mode', 0x8917] halluci\objects\brute_crate_lid\brute_crate_lid.render_model
+['hlmt', 0x8916] halluci\objects\brute_crate_lid\crate_packing_lid.model
+['bloc', 0x8915] halluci\objects\brute_crate_lid\brute_crate_lid.crate
+[ERROR]: FileNotFoundException while porting 'halluci\objects\brute_crate_rare\brute_crate_rare.crate':
+['bitm', 0x890C] dw3\r3ach\objects\weapons\rifle\spike_rifle\bitmaps\spike_rifle_illum.bitmap
+['bitm', 0x890B] dw3\r3ach\objects\weapons\rifle\spike_rifle\bitmaps\spike_rifle_zbump.bitmap
+['bitm', 0x890F] objects\equipment\bitmaps\jammer_nrm.bitmap
+['bitm', 0x890A] dw3\r3ach\objects\weapons\rifle\spike_rifle\bitmaps\spike_rifle_diffuse.bitmap
+[ERROR]: System.IO.FileNotFoundException: Could not find file 'D:\Games\steamapps\workshop\content\976730\3748659423\halo3\fmod\pc\english.fsb.info'.
+File name: 'D:\Games\steamapps\workshop\content\976730\3748659423\halo3\fmod\pc\english.fsb.info'
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.OpenRead(String path)
+   at TagTool.Audio.Bank.SoundBankIndex..ctor(String filePath) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Audio\Bank\SoundBankIndex.cs:line 22
+   at TagTool.Audio.Bank.SoundBank..ctor(String filePath) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Audio\Bank\SoundBank.cs:line 13
+   at TagTool.Audio.Bank.SoundBankCache.LoadBank(String filePath) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Audio\Bank\SoundBankCache.cs:line 33
+   at TagTool.Audio.Bank.SoundBankCache.LoadBanks() in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Audio\Bank\SoundBankCache.cs:line 26
+   at TagTool.Audio.Bank.SoundBankCache..ctor(List`1 directories) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Audio\Bank\SoundBankCache.cs:line 16
+   at TagTool.Cache.GameCacheGen3.LoadSoundBanks() in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Cache\Gen3\GameCacheGen3.cs:line 258
+   at TagTool.Porting.Gen3.PortingContextGen3.CheckSoundBank(Sound sound) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\Gen3\PortingContextGen3.Sound.cs:line 496
+   at TagTool.Porting.Gen3.PortingContextGen3.TagIsValid(CachedTag blamTag, Stream cacheStream, Stream blamCacheStream, Object blamDefinition, CachedTag& resultTag) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\Gen3\PortingContextGen3.cs:line 497
+   at TagTool.Porting.PortingContext.ConvertTag(Stream cacheStream, Stream blamCacheStream, CachedTag blamTag, String blamParentTagName, Object blamDefinition, ConvertTagOptions& options) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 130
+   at TagTool.Porting.PortingContext.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 453
+   at TagTool.Porting.Gen3.PortingContextGen3.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\Gen3\PortingContextGen3.cs:line 389
+   at TagTool.Porting.PortingContext.ConvertFieldvalue(Stream cacheStream, Stream blamCacheStream, TagFieldInfo tagFieldInfo, Object value, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 485
+   at TagTool.Porting.Gen3.PortingContextGen3.ConvertFieldvalue(Stream cacheStream, Stream blamCacheStream, TagFieldInfo tagFieldInfo, Object value, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\Gen3\PortingContextGen3.cs:line 400
+   at TagTool.Porting.PortingContext.ConvertStructure[T](Stream cacheStream, Stream blamCacheStream, T data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 376
+   at TagTool.Porting.PortingContext.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 462
+   at TagTool.Porting.Gen3.PortingContextGen3.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\Gen3\PortingContextGen3.cs:line 389
+   at TagTool.Porting.PortingContext.ConvertCollection(Stream cacheStream, Stream blamCacheStream, IList data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 505
+   at TagTool.Porting.PortingContext.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 458
+   at TagTool.Porting.Gen3.PortingContextGen3.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\Gen3\PortingContextGen3.cs:line 389
+   at TagTool.Porting.PortingContext.ConvertFieldvalue(Stream cacheStream, Stream blamCacheStream, TagFieldInfo tagFieldInfo, Object value, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 485
+   at TagTool.Porting.Gen3.PortingContextGen3.ConvertFieldvalue(Stream cacheStream, Stream blamCacheStream, TagFieldInfo tagFieldInfo, Object value, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\Gen3\PortingContextGen3.cs:line 400
+   at TagTool.Porting.PortingContext.ConvertStructure[T](Stream cacheStream, Stream blamCacheStream, T data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 376
+   at TagTool.Porting.PortingContext.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 462
+   at TagTool.Porting.Gen3.PortingContextGen3.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\Gen3\PortingContextGen3.cs:line 389
+   at TagTool.Porting.PortingContext.ConvertCollection(Stream cacheStream, Stream blamCacheStream, IList data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 505
+   at TagTool.Porting.PortingContext.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 458
+   at TagTool.Porting.Gen3.PortingContextGen3.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\Gen3\PortingContextGen3.cs:line 389
+   at TagTool.Porting.PortingContext.ConvertFieldvalue(Stream cacheStream, Stream blamCacheStream, TagFieldInfo tagFieldInfo, Object value, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 485
+   at TagTool.Porting.Gen3.PortingContextGen3.ConvertFieldvalue(Stream cacheStream, Stream blamCacheStream, TagFieldInfo tagFieldInfo, Object value, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\Gen3\PortingContextGen3.cs:line 400
+   at TagTool.Porting.PortingContext.ConvertStructure[T](Stream cacheStream, Stream blamCacheStream, T data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 376
+   at TagTool.Porting.PortingContext.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 462
+   at TagTool.Porting.Gen3.PortingContextGen3.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\Gen3\PortingContextGen3.cs:line 389
+   at TagTool.Porting.Gen3.PortingContextGen3.ConvertDefinition(Stream cacheStream, Stream blamCacheStream, CachedTag edTag, CachedTag blamTag, Object blamDefinition) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\Gen3\PortingContextGen3.cs:line 49
+   at TagTool.Porting.PortingContext.ConvertTagInternal(Stream cacheStream, Stream blamCacheStream, CachedTag blamTag, Object blamDefinition, String blamParentTagName, CacheKey cacheKey, ConvertTagOptions& options) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 207
+   at TagTool.Porting.PortingContext.ConvertTag(Stream cacheStream, Stream blamCacheStream, CachedTag blamTag, String blamParentTagName, Object blamDefinition, ConvertTagOptions& options) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 132
+   at TagTool.Porting.PortingContext.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 453
+   at TagTool.Porting.Gen3.PortingContextGen3.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\Gen3\PortingContextGen3.cs:line 389
+   at TagTool.Porting.PortingContext.ConvertFieldvalue(Stream cacheStream, Stream blamCacheStream, TagFieldInfo tagFieldInfo, Object value, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 485
+   at TagTool.Porting.Gen3.PortingContextGen3.ConvertFieldvalue(Stream cacheStream, Stream blamCacheStream, TagFieldInfo tagFieldInfo, Object value, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\Gen3\PortingContextGen3.cs:line 400
+   at TagTool.Porting.PortingContext.ConvertStructure[T](Stream cacheStream, Stream blamCacheStream, T data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 376
+   at TagTool.Porting.PortingContext.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 462
+   at TagTool.Porting.Gen3.PortingContextGen3.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\Gen3\PortingContextGen3.cs:line 389
+   at TagTool.Porting.PortingContext.ConvertCollection(Stream cacheStream, Stream blamCacheStream, IList data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 505
+   at TagTool.Porting.PortingContext.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 458
+   at TagTool.Porting.Gen3.PortingContextGen3.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\Gen3\PortingContextGen3.cs:line 389
+   at TagTool.Porting.PortingContext.ConvertFieldvalue(Stream cacheStream, Stream blamCacheStream, TagFieldInfo tagFieldInfo, Object value, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 485
+   at TagTool.Porting.Gen3.PortingContextGen3.ConvertFieldvalue(Stream cacheStream, Stream blamCacheStream, TagFieldInfo tagFieldInfo, Object value, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\Gen3\PortingContextGen3.cs:line 400
+   at TagTool.Porting.PortingContext.ConvertStructure[T](Stream cacheStream, Stream blamCacheStream, T data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 376
+   at TagTool.Porting.PortingContext.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 462
+   at TagTool.Porting.Gen3.PortingContextGen3.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\Gen3\PortingContextGen3.cs:line 389
+   at TagTool.Porting.PortingContext.ConvertCollection(Stream cacheStream, Stream blamCacheStream, IList data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 505
+   at TagTool.Porting.PortingContext.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 458
+   at TagTool.Porting.Gen3.PortingContextGen3.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\Gen3\PortingContextGen3.cs:line 389
+   at TagTool.Porting.PortingContext.ConvertFieldvalue(Stream cacheStream, Stream blamCacheStream, TagFieldInfo tagFieldInfo, Object value, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 485
+   at TagTool.Porting.Gen3.PortingContextGen3.ConvertFieldvalue(Stream cacheStream, Stream blamCacheStream, TagFieldInfo tagFieldInfo, Object value, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\Gen3\PortingContextGen3.cs:line 400
+   at TagTool.Porting.PortingContext.ConvertStructure[T](Stream cacheStream, Stream blamCacheStream, T data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 376
+   at TagTool.Porting.PortingContext.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 462
+   at TagTool.Porting.Gen3.PortingContextGen3.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\Gen3\PortingContextGen3.cs:line 389
+   at TagTool.Porting.PortingContext.ConvertCollection(Stream cacheStream, Stream blamCacheStream, IList data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 505
+   at TagTool.Porting.PortingContext.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 458
+   at TagTool.Porting.Gen3.PortingContextGen3.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\Gen3\PortingContextGen3.cs:line 389
+   at TagTool.Porting.PortingContext.ConvertFieldvalue(Stream cacheStream, Stream blamCacheStream, TagFieldInfo tagFieldInfo, Object value, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 485
+   at TagTool.Porting.Gen3.PortingContextGen3.ConvertFieldvalue(Stream cacheStream, Stream blamCacheStream, TagFieldInfo tagFieldInfo, Object value, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\Gen3\PortingContextGen3.cs:line 400
+   at TagTool.Porting.PortingContext.ConvertStructure[T](Stream cacheStream, Stream blamCacheStream, T data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 376
+   at TagTool.Porting.PortingContext.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 462
+   at TagTool.Porting.Gen3.PortingContextGen3.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\Gen3\PortingContextGen3.cs:line 389
+   at TagTool.Porting.Gen3.PortingContextGen3.ConvertDefinition(Stream cacheStream, Stream blamCacheStream, CachedTag edTag, CachedTag blamTag, Object blamDefinition) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\Gen3\PortingContextGen3.cs:line 49
+   at TagTool.Porting.PortingContext.ConvertTagInternal(Stream cacheStream, Stream blamCacheStream, CachedTag blamTag, Object blamDefinition, String blamParentTagName, CacheKey cacheKey, ConvertTagOptions& options) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 207
+   at TagTool.Porting.PortingContext.ConvertTag(Stream cacheStream, Stream blamCacheStream, CachedTag blamTag, String blamParentTagName, Object blamDefinition, ConvertTagOptions& options) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 132
+   at TagTool.Porting.PortingContext.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 453
+   at TagTool.Porting.Gen3.PortingContextGen3.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\Gen3\PortingContextGen3.cs:line 389
+   at TagTool.Porting.PortingContext.ConvertFieldvalue(Stream cacheStream, Stream blamCacheStream, TagFieldInfo tagFieldInfo, Object value, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 485
+   at TagTool.Porting.Gen3.PortingContextGen3.ConvertFieldvalue(Stream cacheStream, Stream blamCacheStream, TagFieldInfo tagFieldInfo, Object value, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\Gen3\PortingContextGen3.cs:line 400
+   at TagTool.Porting.PortingContext.ConvertStructure[T](Stream cacheStream, Stream blamCacheStream, T data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 376
+   at TagTool.Porting.PortingContext.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 462
+   at TagTool.Porting.Gen3.PortingContextGen3.ConvertData(Stream cacheStream, Stream blamCacheStream, Object data, Object definition, String blamTagName) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\Gen3\PortingContextGen3.cs:line 389
+   at TagTool.Porting.Gen3.PortingContextGen3.ConvertDefinition(Stream cacheStream, Stream blamCacheStream, CachedTag edTag, CachedTag blamTag, Object blamDefinition) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\Gen3\PortingContextGen3.cs:line 49
+   at TagTool.Porting.PortingContext.ConvertTagInternal(Stream cacheStream, Stream blamCacheStream, CachedTag blamTag, Object blamDefinition, String blamParentTagName, CacheKey cacheKey, ConvertTagOptions& options) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 207
+   at TagTool.Porting.PortingContext.ConvertTag(Stream cacheStream, Stream blamCacheStream, CachedTag blamTag, String blamParentTagName, Object blamDefinition, ConvertTagOptions& options) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Porting\PortingContext.cs:line 132
+   at TagTool.Commands.Porting.PortTagCommand.Execute(List`1 args) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Commands\Porting\PortTagCommand.cs:line 54
+   at TagTool.Commands.Common.CommandRunner.ExecuteCommand(CommandContext context, List`1 commandAndArgs, Dictionary`2 argVariables) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Commands\Common\CommandRunner.cs:line 158
+   at TagTool.Commands.Common.CommandRunner.RunCommand(String commandLine, Boolean printInput, Boolean printOutput) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Commands\Common\CommandRunner.cs:line 128
+   at TagTool.Commands.Program.RunCommandLoop(CommandRunner commandRunner, CommandContextStack contextStack) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Program.cs:line 128
+   at TagTool.Commands.Program.MainCore(String[] args) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Program.cs:line 112
+   at TagTool.Commands.Program.Main(String[] args) in D:\a\TagTool-NET-Test\TagTool-NET-Test\TagTool\Program.cs:line 44
