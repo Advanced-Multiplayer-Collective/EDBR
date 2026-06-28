@@ -1256,6 +1256,7 @@ exit
 #red plasma rifle
 EditTag objects\weapons\rifle\plasma_rifle_red\plasma_rifle_red.weapon
 SetField FirstPerson[0].FirstPersonAnimations objects\characters\masterchief\fp\weapons\rifle\fp_plasma_rifle\fp_plasma_rifle.model_animation_graph
+SetField WeaponFlags.NewFlags CannotFireAtMaximumAge,LoopFPFiringAnimation,CanBeDualWielded
 savetagchanges
 exit
 
