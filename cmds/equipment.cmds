@@ -89,4 +89,9 @@ opencachefile "Workshopdir\3748659423\maps\blam_mountain_halluci.map"
 porttag halluci\objects\utility\grapplinghook\grapplinghook.weapon
 exit
 
+EditTag halluci\ui\chud\grapplinghook.chud_definition
+SetField HudWidgets[2].ParallaxData ui\chud\parallax\vehicles.chud_widget_parallax_data
+SaveTagChanges
+Exit
+
 AddForgeItem "Grapple Hook" "EQUIPMENT" halluci\objects\utility\grapplinghook\grapplinghook.weapon

@@ -342,11 +342,13 @@ savetagchanges
 Exit
 
 
-
-
-
-
-
+# ------------------------
+# |        HUD           |
+# ------------------------
+EditTag ui\chud\target_laser.chud_definition
+SetField HudWidgets[3].ParallaxData ui\chud\parallax\vehicles.chud_widget_parallax_data
+savetagchanges
+exit
 
 
 
@@ -442,6 +444,14 @@ Exit
 AddForgeItem "Concussion Rifle" 1 dw3\r3ach\objects\weapons\rifle\concussion_rifle\concussion_rifle.weapon
 
 
+#
+# |HUD|
+#
+
+EditTag dw3\r3ach\ui\chud\concussion_rifle.chud_definition
+SetField HudWidgets[2].ParallaxData ui\chud\parallax\vehicles.chud_widget_parallax_data
+savetagchanges
+exit
 
 
 
@@ -536,6 +546,13 @@ Exit
 
 AddForgeItem "Focus Rifle" 1 dw3\r3ach\objects\weapons\rifle\focus_rifle\focus_rifle.weapon
 
+#
+# |HUD|
+#
+EditTag dw3\r3ach\ui\chud\focus_rifle.chud_definition
+SetField HudWidgets[2].ParallaxData ui\chud\parallax\vehicles.chud_widget_parallax_data
+savetagchanges
+exit
 
 
 #
@@ -627,6 +644,13 @@ Exit
 AddForgeItem "Grenade Launcher" 1 dw3\r3ach\objects\weapons\rifle\grenade_launcher\grenade_launcher.weapon
 
 
+#
+# |HUD|
+#
+EditTag dw3\r3ach\ui\chud\grenade_launcher.chud_definition
+SetField HudWidgets[3].ParallaxData ui\chud\parallax\vehicles.chud_widget_parallax_data
+savetagchanges
+exit
 
 #
 #ECHO ||||Needle Rifle|||
@@ -718,6 +742,15 @@ Exit
 
 
 AddForgeItem "Needle Rifle" 1 dw3\r3ach\objects\weapons\rifle\needle_rifle\needle_rifle.weapon
+
+
+#
+# |HUD|
+#
+EditTag dw3\r3ach\ui\chud\needle_rifle.chud_definition
+SetField HudWidgets[2].ParallaxData ui\chud\parallax\vehicles.chud_widget_parallax_data
+savetagchanges
+exit
 
 #
 #ECHO ||||Plasma Repeater|||
@@ -818,6 +851,14 @@ Exit
 
 AddForgeItem "Plasma Repeater" 1 dw3\r3ach\objects\weapons\rifle\plasma_repeater\plasma_repeater.weapon
 
+#
+# |HUD|
+#
+
+EditTag dw3\r3ach\ui\chud\plasma_repeater.chud_definition
+SetField HudWidgets[2].ParallaxData ui\chud\parallax\vehicles.chud_widget_parallax_data
+savetagchanges
+exit
 
 #
 #ECHO ||||Plasma Launcher|||
@@ -906,6 +947,14 @@ Exit
 
 AddForgeItem "Plasma Launcher" 1 dw3\r3ach\objects\weapons\support_high\plasma_launcher\plasma_launcher.weapon
 
+#
+# |HUD|
+#
+
+EditTag dw3\r3ach\ui\chud\plasma_launcher.chud_definition
+SetField HudWidgets[2].ParallaxData ui\chud\parallax\vehicles.chud_widget_parallax_data
+savetagchanges
+exit
 
 #
 #ECHO||CE Magnum|||
@@ -975,6 +1024,14 @@ Exit
 
 AddForgeItem "CE Magnum" 1 custom\weapons\hce\tgof_hce_magnum\hce_magnum.weapon
 
+#
+# |HUD|
+#
+
+EditTag custom\ui\chud\hce_magnum.chud_definition
+SetField HudWidgets[0].ParallaxData ui\chud\parallax\vehicles.chud_widget_parallax_data
+savetagchanges
+exit
 
 #
 #ECHO||CE Assault Rifle|||
@@ -1036,6 +1093,14 @@ Exit
 
 AddForgeItem "CE Assault Rifle" 1 custom\weapons\hce\tgof_hce_assault_rifle\hce_ar.weapon
 
+#
+# |HUD|
+#
+
+EditTag custom\ui\chud\hce_ar.chud_definition
+SetField HudWidgets[0].ParallaxData ui\chud\parallax\vehicles.chud_widget_parallax_data
+savetagchanges
+exit
 
 #
 #ECHO||ODST SSMG|||
@@ -1098,7 +1163,14 @@ Exit
 
 AddForgeItem "Silenced SMG" 1 objects\weapons\rifle\smg_silenced\smg_silenced.weapon
 
+#
+# |HUD|
+#
 
+EditTag ui\chud\smg_silenced.chud_definition
+SetField HudWidgets[1].ParallaxData ui\chud\parallax\vehicles.chud_widget_parallax_data
+savetagchanges
+exit
 
 #
 #ECHO||ODST AUTOMAG|||
@@ -1154,6 +1226,14 @@ Exit
 
 AddForgeItem "Automag" 1 objects\weapons\pistol\automag\automag.weapon
 
+#
+# |HUD|
+#
+
+EditTag ui\chud\automag.chud_definition
+SetField HudWidgets[2].ParallaxData ui\chud\parallax\vehicles.chud_widget_parallax_data
+savetagchanges
+exit
 
 #
 #ECHO||ODST Brute plasma Rifle|||
