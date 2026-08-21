@@ -100,6 +100,10 @@ SetField Events[0].ParticleSystems[2].Emitters[0].RuntimeMGpu.Colors[1].Color 1 
 savetagchanges
 exit
 
+edittag halluci\objects\brute_crate_rare\projectilespawner\detonation.effect
+RemoveBlockElements Events 17 1
+savetagchanges
+exit
 
 echo equipment crate
 
@@ -108,6 +112,11 @@ nametag * halluci\objects\brute_crate_eqip\shaders\tripmine_danger.shader
 
 edittag halluci\objects\brute_crate_eqip\shaders\tripmine_danger.shader
 SetField ShaderProperties[0].Functions[2].Function.Data 00340200FF0500000000000000000000FF001600000000000000000000000000
+savetagchanges
+exit
+
+EditTag halluci\objects\crates\brute_crate_secret\brute_crate.model
+SetField PhysicsModel halluci\objects\brute_crate\brute_crate.physics_model
 savetagchanges
 exit
 
@@ -128,6 +137,7 @@ exit
 
 EditTag halluci\objects\crates\brute_crate_secret\brute_crate_secret.crate
 SetField MultiplayerObject[0].DefaultSpawnTime 30
+SetField SelfDestructionTimer 0
 savetagchanges
 exit
 
